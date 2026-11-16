@@ -14,14 +14,49 @@ export const metadata: Metadata = pageMeta({
 export default function HomePage() {
   return (
     <>
-      <section className="hero">
-        <div className="bg" />
-        <div className="wrap">
-          <h1>Your journey, handled with care</h1>
-          <p>Cars and buses for hotel guests, airport transfers, local journeys and group travel.</p>
+      <section className="hero2">
+        <div className="hero2-bg" />
+        <div className="wrap hero2-in">
+          <h1>
+            <span>Travel in comfort</span>
+            <span className="outline">with Shital</span>
+          </h1>
+          <p>Cars and buses for hotel guests, airport transfers, local journeys and group travel across Ahmedabad.</p>
           <div className="btns">
             <Link className="btn" href="/book">Request a Vehicle &rarr;</Link>
-            <Link className="btn ghost" href="/services">Our Services</Link>
+            <Link className="btn ghost light" href="/fleet">View Our Fleet</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="lookfor">
+        <div className="wrap">
+          <div className="lookfor-card">
+            <div className="why-head">
+              <h2>Why travel with Shital?</h2>
+              <Link className="btn" href="/book">Book Your Ride &rarr;</Link>
+            </div>
+            <div className="why-grid">
+              {[
+                ["🕒", "24/7 Available", "Early flights or late check-ins, we are ready any time."],
+                ["🧑‍✈️", "Experienced Drivers", "Courteous, verified drivers who know every route."],
+                ["✨", "Clean Vehicles", "Well-maintained, sanitised cars and buses on every trip."],
+                ["📍", "On-time Pickup", "Punctual pickups from hotels, homes and airports."],
+              ].map(([ic, t, d]) => (
+                <div key={t} className="why-it">
+                  <span className="why-ic">{ic}</span>
+                  <div><b>{t}</b><p>{d}</p></div>
+                </div>
+              ))}
+            </div>
+            <div className="why-links">
+              <span>Popular:</span>
+              <Link href="/services">Airport Transfer</Link>
+              <Link href="/services">Hotel Guest Pickup</Link>
+              <Link href="/packages">Tour Packages</Link>
+              <Link href="/services">Outstation Trips</Link>
+              <Link href="/fleet">Bus &amp; Tempo for Groups</Link>
+            </div>
           </div>
         </div>
       </section>
