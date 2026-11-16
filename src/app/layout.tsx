@@ -9,14 +9,12 @@ import { SITE_NAME, SITE_URL } from "@/lib/config";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter",
   display: "swap",
 });
 
 const serif = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
