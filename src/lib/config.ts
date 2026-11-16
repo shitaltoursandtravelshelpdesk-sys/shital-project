@@ -1,6 +1,6 @@
 export const BIZ = {
-  phone: "98765 43210",
-  whatsapp: "98765 43210",
+  phone: "98981 09882",
+  whatsapp: "95125 23663",
   email: "info@shitaltravels.com",
   office:
     "407, 4th Floor, Sahajanand Shopping Centre, Opp. Rajasthan High School, Aashiya House, Shahibaug, Ahmedabad, Gujarat 380004",
