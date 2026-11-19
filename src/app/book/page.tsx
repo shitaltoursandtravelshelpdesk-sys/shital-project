@@ -15,8 +15,9 @@ export const metadata: Metadata = pageMeta({
 export default function BookPage() {
   return (
     <>
-      <section className="phero" style={{ "--img": "url(/images/request-hero.png)" } as CSSProperties}>
+      <section className="phero" style={{ "--img": "url(/images/ahmedabad-riverfront.jpg)" } as CSSProperties}>
         <div className="bg" />
+        <div className="phero-car" aria-hidden="true" />
         <div className="wrap">
           <div className="crumb">Safe journeys &middot; Comfortable rides &middot; With the experts</div>
           <h1>Request a Vehicle</h1>
@@ -39,7 +40,7 @@ export default function BookPage() {
         </aside>
       </div>
 
-      <div className="wrap">
+      <div className="wrap help-wrap">
         <div className="card help">
           <h3 style={{ fontSize: "20px" }}>Need help booking?</h3>
           <p style={{ color: "var(--muted)", fontSize: "13px" }}>Our team is here to assist you with vehicle options, routes and special requests.</p>

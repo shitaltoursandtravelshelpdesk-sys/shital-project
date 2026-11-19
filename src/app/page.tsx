@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PhoneIcon, ChatIcon, MailIcon, PinIcon } from "@/components/icons";
+import { PhoneIcon, ChatIcon, MailIcon, PinIcon, CalendarIcon, CarIcon, PlaneIcon, HotelIcon, RoadIcon, BusIcon, HeadsetIcon, UserIcon, ShieldIcon, StarIcon } from "@/components/icons";
+import type { ReactNode } from "react";
 import { BizItem, BizText } from "@/components/ui/BizLink";
 import { pageMeta } from "@/lib/seo";
 import { EnquiryButton } from "@/components/ui/EnquiryButton";
+
+const WHY: [ReactNode, string, string][] = [
+  [<HeadsetIcon key="a" bare size={22} />, "24/7 Available", "Early flights or late check-ins, we are ready any time."],
+  [<UserIcon key="b" bare size={22} />, "Experienced Drivers", "Courteous, verified drivers who know every route."],
+  [<ShieldIcon key="c" bare size={22} />, "Clean Vehicles", "Well-maintained, sanitised cars and buses on every trip."],
+  [<PinIcon key="d" bare size={22} />, "On-time Pickup", "Punctual pickups from hotels, homes and airports."],
+];
 
 export const metadata: Metadata = pageMeta({
   title: "Shital Tours & Travels — Your journey, handled with care",
@@ -23,8 +31,8 @@ export default function HomePage() {
           </h1>
           <p>Cars and buses for hotel guests, airport transfers, local journeys and group travel across Ahmedabad.</p>
           <div className="btns">
-            <Link className="btn" href="/book">Request a Vehicle &rarr;</Link>
-            <Link className="btn ghost light" href="/fleet">View Our Fleet</Link>
+            <Link className="btn" href="/book"><CalendarIcon /> Request a Vehicle &rarr;</Link>
+            <Link className="btn ghost light" href="/fleet"><CarIcon /> View Our Fleet</Link>
           </div>
         </div>
       </section>
@@ -33,29 +41,23 @@ export default function HomePage() {
         <div className="wrap">
           <div className="lookfor-card">
             <div className="why-head">
-              <h2>Why travel with Shital?</h2>
-              <Link className="btn" href="/book">Book Your Ride &rarr;</Link>
+              <h2><StarIcon /> Why travel with Shital?</h2>
+              <Link className="btn" href="/book"><CarIcon /> Book Your Ride &rarr;</Link>
             </div>
-            <div className="why-grid">
+            <div className="pop-grid">
               {[
-                ["🕒", "24/7 Available", "Early flights or late check-ins, we are ready any time."],
-                ["🧑‍✈️", "Experienced Drivers", "Courteous, verified drivers who know every route."],
-                ["✨", "Clean Vehicles", "Well-maintained, sanitised cars and buses on every trip."],
-                ["📍", "On-time Pickup", "Punctual pickups from hotels, homes and airports."],
-              ].map(([ic, t, d]) => (
-                <div key={t} className="why-it">
-                  <span className="why-ic">{ic}</span>
-                  <div><b>{t}</b><p>{d}</p></div>
-                </div>
+                ["Airport Transfer", "/services", "/images/airport.png", <PlaneIcon key="p" bare size={18} />],
+                ["Hotel Guest Pickup", "/services", "/images/hotel-car.png", <HotelIcon key="h" bare size={18} />],
+                ["Tour Packages", "/packages", "/images/packages-hero.png", <PinIcon key="t" bare size={18} />],
+                ["Outstation Trips", "/services", "/images/outstation.png", <RoadIcon key="o" bare size={18} />],
+                ["Bus & Tempo for Groups", "/fleet", "/images/bus.png", <BusIcon key="b" bare size={18} />],
+              ].map(([t, href, img, icon]) => (
+                <Link key={t as string} href={href as string} className="pop-it">
+                  <span className="pop-img" style={{ backgroundImage: `url(${img})` }} />
+                  <span className="pop-ic">{icon}</span>
+                  <b>{t} &rarr;</b>
+                </Link>
               ))}
-            </div>
-            <div className="why-links">
-              <span>Popular:</span>
-              <Link href="/services">Airport Transfer</Link>
-              <Link href="/services">Hotel Guest Pickup</Link>
-              <Link href="/packages">Tour Packages</Link>
-              <Link href="/services">Outstation Trips</Link>
-              <Link href="/fleet">Bus &amp; Tempo for Groups</Link>
             </div>
           </div>
         </div>
@@ -81,6 +83,16 @@ export default function HomePage() {
             <BizItem type="whatsapp"><div className="ic"><ChatIcon /></div><b>WhatsApp</b><BizText type="whatsapp" /></BizItem>
             <BizItem type="email"><div className="ic"><MailIcon /></div><b>Email</b><BizText type="email" /></BizItem>
             <BizItem type="office"><div className="ic"><PinIcon /></div><b>Office</b><BizText type="office" /></BizItem>
+          </div>
+          <div className="why-marquee" aria-label="Why travel with Shital">
+            <div className="why-track">
+              {[...WHY, ...WHY].map(([ic, t, d], i) => (
+                <div key={i} className="why-it" aria-hidden={i >= WHY.length}>
+                  <span className="why-ic">{ic}</span>
+                  <div><b>{t}</b><p>{d}</p></div>
+                </div>
+              ))}
+            </div>
           </div>
           <EnquiryButton />
         </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CarIcon, BusIcon, HotelIcon, PlaneIcon } from "@/components/icons";
+import { CarIcon, BusIcon, HotelIcon, PlaneIcon, UsersIcon } from "@/components/icons";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -16,9 +16,10 @@ export default function ServicesPage() {
         <div className="wrap center">
           <div className="eyebrow">Our Services</div>
           <h2 className="sec-title">Travel solutions for every need</h2>
-          <div className="svc4">
+          <div className="svc4 svc5">
             <div className="it"><div className="ic"><CarIcon /></div><h3>Car Rental</h3><p>Comfortable cars for local travel, outstation trips and custom itineraries.</p></div>
             <div className="it"><div className="ic"><BusIcon /></div><h3>Bus &amp; Group Travel</h3><p>Buses for corporate groups, weddings, educational tours and other group travel.</p></div>
+            <div className="it"><div className="ic"><UsersIcon /></div><h3>Business Rides</h3><p>Daily office commute, client pickups and business trips for companies, with monthly billing.</p></div>
             <div className="it"><div className="ic"><HotelIcon /></div><h3>Hotel Guest Trips</h3><p>Dedicated transport for hotel guests, sightseeing and local travel around the city.</p></div>
             <div className="it"><div className="ic"><PlaneIcon /></div><h3>Airport Pickup &amp; Drop</h3><p>Timely and reliable transfers to and from Ahmedabad Airport for individuals and groups.</p></div>
           </div>

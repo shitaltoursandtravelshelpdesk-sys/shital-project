@@ -15,8 +15,10 @@ export default function DrivePage() {
     <div className="wrap" style={{ maxWidth: "1000px" }}>
       <section className="dw-top">
         <div>
+          <div className="eyebrow">Careers &middot; Driver Roles</div>
           <h1>Drive With Us</h1>
           <p style={{ color: "var(--muted)" }}>Apply for a driver role with Shital Tours &amp; Travels.</p>
+          <div className="dw-box">
           <div className="dw-h">What you will do</div>
           <ul className="dots">
             <li>Guest pickup from airports, railway stations, hotels and other locations.</li>
@@ -24,6 +26,8 @@ export default function DrivePage() {
             <li>Local sightseeing tours and outstation trips.</li>
             <li>Maintain vehicle condition and ensure a safe and comfortable journey for our guests.</li>
           </ul>
+          </div>
+          <div className="dw-box">
           <div className="dw-h">What to bring</div>
           <ul className="dots">
             <li>Valid driving licence (LMV/HMV as applicable).</li>
@@ -31,6 +35,7 @@ export default function DrivePage() {
             <li>Ability to communicate in English/Hindi or a local Indian language.</li>
             <li>Good communication skills, a friendly attitude and a professional appearance.</li>
           </ul>
+          </div>
         </div>
         <div className="dw-img ph" />
       </section>

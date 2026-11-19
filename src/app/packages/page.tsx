@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { IndiaMap, DESTINATIONS } from "@/components/IndiaMap";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PlaneIcon, PinIcon, RoadIcon, UsersIcon, CarIcon, HotelIcon, CalendarIcon, PhoneIcon, ChatIcon, MailIcon } from "@/components/icons";
@@ -22,7 +23,7 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      <section className="sec">
+      <section className="sec white">
         <div className="wrap">
           <div className="center">
             <div className="eyebrow">Our Packages &amp; Services</div>
@@ -67,6 +68,25 @@ export default function PackagesPage() {
               <Link className="btn" href="/book?service=bus">Request This Trip &rarr;</Link>
             </div>
           </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec trav">
+        <div className="wrap trav-in">
+          <div className="trav-map"><IndiaMap /><small className="trav-credit">Map: @svg-maps/india (CC BY 4.0)</small></div>
+          <div>
+            <div className="eyebrow">Where We Have Travelled</div>
+            <h2 className="sec-title sans" style={{ textAlign: "left" }}>From Ahmedabad to across India</h2>
+            <p className="trav-lead">Our drivers have taken families, hotel guests and groups to {DESTINATIONS.length - 1}+ destinations across India. Tell us where you want to go next.</p>
+            <ul className="trav-list">
+              {DESTINATIONS.map(([name, state], i) => (
+                <li key={name} className={i === 0 ? "home" : undefined}>
+                  <PinIcon bare size={14} /> <b>{name}</b> <span>{i === 0 ? "Our base" : state}</span>
+                </li>
+              ))}
+            </ul>
+            <Link className="btn" href="/book?service=outstation">Plan Your Trip &rarr;</Link>
           </div>
         </div>
       </section>
