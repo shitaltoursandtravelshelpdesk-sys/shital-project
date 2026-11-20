@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { BizItem, BizText } from "@/components/ui/BizLink";
 import { pageMeta } from "@/lib/seo";
 import { EnquiryButton } from "@/components/ui/EnquiryButton";
+import { ClientLogos } from "@/components/ClientLogos";
 
 const WHY: [ReactNode, string, string][] = [
   [<HeadsetIcon key="a" bare size={22} />, "24/7 Available", "Early flights or late check-ins, we are ready any time."],
@@ -63,6 +64,8 @@ export default function HomePage() {
         </div>
       </section>
       
+      <ClientLogos />
+
       <section className="sec" id="about">
         <div className="wrap split about">
           <div className="img-card ph" style={{backgroundImage: "url(/images/fleet-sunset.png),linear-gradient(160deg,#f6c58a,#c97b4a 45%,#3d5a78)"}}></div>

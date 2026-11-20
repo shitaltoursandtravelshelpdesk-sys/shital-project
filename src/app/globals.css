@@ -734,3 +734,177 @@ h1,h2,h3,h4,h5,.sec-title{font-family:var(--head)!important;font-weight:400!impo
 @media (min-width:1001px){
   .hero2{zoom:.8}
 }
+
+/* tours: poster-style package cards */
+.tour .poster{order:0!important;position:relative;aspect-ratio:4/5;background-size:cover;background-position:center;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:18px;overflow:hidden}
+.tour .poster::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,25,45,.55) 0%,rgba(5,25,45,.05) 30%,rgba(5,25,45,.1) 50%,rgba(5,25,45,.85) 100%)}
+.poster > *{position:relative;z-index:1}
+.poster-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.poster-brand{font-family:var(--head);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--navy-d);padding:5px 10px;border-radius:4px}
+.poster-tag{font-size:12px;font-weight:700;background:#f4c66b;color:#2a1d0e;padding:5px 10px;border-radius:999px}
+.poster-mid{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.poster-kicker{font-family:var(--font-script),cursive;font-size:30px;color:#f4c66b;line-height:1;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.tour .poster-title{font-family:var(--head)!important;font-size:clamp(26px,2.6vw,34px);line-height:1.05;color:#fff!important;text-transform:uppercase;text-shadow:0 3px 14px rgba(0,0,0,.5);margin:0}
+.poster-ribbon{margin-top:8px;background:var(--grad);color:#fff;font-family:var(--head);font-size:14px;letter-spacing:.04em;padding:7px 14px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.poster-inc{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.3)}
+.poster-inc span{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:600;text-align:center;line-height:1.2}
+.poster-inc svg{width:34px;height:34px;padding:7px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--navy-d)}
+.poster-price{position:absolute!important;right:16px;top:58px;width:84px;height:84px;border-radius:50%;background:#c0392b;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-8deg);box-shadow:0 6px 16px rgba(0,0,0,.35);border:3px dashed rgba(255,255,255,.7)}
+.poster-price small{font-size:11px;opacity:.9}
+.poster-price b{font-family:var(--head);font-size:13px;line-height:1.1}
+.tour .tour-body h3{display:none}
+.poster-brand,.poster-tag{white-space:nowrap}
+.poster-brand{font-size:10.5px;letter-spacing:.05em;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.poster-tag{font-size:11px;flex:none}
+
+/* tours hero: destination collage */
+.tours-hero{background:linear-gradient(135deg,#0a2f52,#0d4a73 55%,#0f6a85);color:#fff;padding:56px 0;overflow:hidden}
+.tours-hero-in{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.tours-hero .eyebrow{color:#9fd8de}
+.tours-hero h1{font-family:var(--font-inter),"Inter",sans-serif!important;font-weight:800!important;font-size:clamp(36px,4.6vw,56px);color:#fff;margin:6px 0 12px}
+.tours-hero p{color:#d6e6ea;max-width:480px;margin-bottom:20px}
+.th-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.th-chips span{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:600}
+.th-chips svg{color:#f4c66b}
+.tours-hero .btn{background:#fff;color:var(--navy-d);border-color:#fff}
+.tours-hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+.th-collage{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:150px 150px;gap:12px}
+.th-ph{position:relative;border-radius:12px;background-size:cover;background-position:center;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.th-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.7))}
+.th-ph span{position:absolute;left:10px;bottom:8px;z-index:1;font-family:var(--head);font-size:13px;color:#fff}
+.th-ph1{grid-row:span 2}
+.th-ph1 span{font-size:16px}
+@media (max-width:900px){.tours-hero-in{grid-template-columns:1fr}.th-collage{grid-template-rows:110px 110px}}
+
+/* book hero: way-to-destination illustration */
+.route-wrap{display:flex;justify-content:center}
+.route-ill{width:100%;max-width:560px;height:auto;border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.route-ill .ri-label{font:700 13px var(--sans);fill:#fff;paint-order:stroke;stroke:rgba(0,0,0,.35);stroke-width:3px}
+.route-ill .ri-dest{font-size:15px;fill:#f4c66b}
+.route-ill .ri-lane{animation:riLane 1.2s linear infinite}
+@keyframes riLane{to{stroke-dashoffset:-24}}
+@media (prefers-reduced-motion:reduce){.route-ill .ri-lane{animation:none}}
+
+/* book hero: real winding-road photo with pickup -> destination */
+.road-card{position:relative;aspect-ratio:3/2;border-radius:18px;overflow:hidden;background:url(/images/luxury-hotel.jpg) center/cover;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.road-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,25,45,.15),rgba(5,25,45,.35))}
+.road-line{position:absolute;inset:0;width:100%;height:100%}
+.road-line path{fill:none;stroke:#f4c66b;stroke-width:.8;stroke-dasharray:2.2 1.6;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-width:3;animation:roadDash 1.4s linear infinite;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+@keyframes roadDash{to{stroke-dashoffset:-7.6}}
+@media (prefers-reduced-motion:reduce){.road-line path{animation:none}}
+.road-tag{position:absolute;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.95);color:var(--ink);padding:9px 14px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.road-tag svg{color:var(--navy);flex:none}
+.road-tag small{display:block;font-size:11px;color:#555;text-transform:uppercase;letter-spacing:.06em}
+.road-tag b{font-size:14px;color:var(--navy-d)}
+.road-from{left:4%;bottom:6%}
+.road-to{right:4%;top:6%}
+.road-to svg{color:#c0392b}
+.road-badge{position:absolute;right:4%;bottom:6%;display:flex;align-items:center;gap:7px;background:var(--grad);color:#fff;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+@media (max-width:560px){.road-tag{padding:6px 10px}.road-tag b{font-size:12px}.road-badge{display:none}}
+/* book hero: 4 hotel photos, 2x2 */
+.hotel-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px}
+.hotel-grid .th-ph span{font-size:15px}
+@media (max-width:900px){.hotel-grid{grid-template-rows:130px 130px}}
+/* packages hero: keep the whole travel image (plane top + vehicles) in view */
+.pk-hero .bg{background-position:center 18%!important}
+.pk-hero .wrap{padding-top:64px!important;padding-bottom:64px!important}
+@media (min-width:1001px){.pk-hero{min-height:560px;display:flex;align-items:center}.pk-hero .wrap{width:100%}}
+.hotel-grid .th-ph{background-position:center 25%}
+
+/* home: client logos */
+.clients{padding:48px 0}
+.client-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px;margin-top:26px}
+.client-logo{width:220px;height:100px;display:grid;place-items:center;background:#fff;border:1px solid #ece6dc;border-radius:12px;padding:18px 24px;box-shadow:0 6px 18px rgba(10,30,50,.06);transition:transform .2s,box-shadow .2s}
+.client-logo:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(10,30,50,.12)}
+.client-logo img{max-width:100%;max-height:52px;object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .2s,opacity .2s}
+.client-logo:hover img{filter:none;opacity:1}
+@media (max-width:560px){.client-logo{width:150px;height:80px;padding:12px}}
+.client-text{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#555;text-align:center}
+.client-text b{font-family:Georgia,"Times New Roman",serif;font-size:22px;font-weight:400;letter-spacing:.12em}
+.client-text small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#888}
+.client-logo.client-text:hover{color:var(--navy-d)}
+/* client logos: continuous right-to-left scroll */
+.client-marquee{overflow:hidden;margin-top:26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.client-track{display:flex;width:max-content;animation:clientScroll 30s linear infinite}
+.client-marquee:hover .client-track{animation-play-state:paused}
+.client-set{display:flex;gap:22px;padding-right:22px}
+.client-set .client-logo{flex:none}
+@keyframes clientScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.client-track{animation:none}}
+
+/* round logo */
+.logo img{border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.hdr .logo img{height:84px}
+.logo.light{background:none;padding:0}
+.logo.light img{height:72px}
+@media (max-width:640px){.hdr .logo img{height:58px}}
+/* big round logo that hangs below the navbar into the hero */
+.hdr .logo{align-self:flex-start;margin-top:8px;position:relative;z-index:2}
+.hdr .logo img{height:108px;border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+@media (max-width:640px){.hdr .logo{margin-top:6px}.hdr .logo img{height:66px;border-width:2px}}
+
+/* vendor registration form: same dark card */
+#vnForm{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(7,30,52,.96),rgba(11,62,92,.93) 60%,rgba(15,106,133,.9)),url(/images/fleet/gallery/5.jpg) center/cover;border-radius:16px;padding:36px;margin:30px 0 10px;box-shadow:0 20px 44px rgba(5,25,45,.3);color:#e6f1f4}
+#vnForm h2,#vnForm h3{color:#fff!important}
+#vnForm p{color:#b9d3da!important}
+#vnForm .fld label{color:#fff;font-size:13.5px}
+#vnForm .fld label .opt{color:#9fc3ca}
+#vnForm .fld label em{color:#f4c66b}
+#vnForm input,#vnForm select,#vnForm textarea{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.22);border-radius:8px;color:#fff;padding:12px 14px;transition:border-color .2s,background .2s}
+#vnForm input::placeholder,#vnForm textarea::placeholder{color:rgba(255,255,255,.5)}
+#vnForm select option{color:var(--ink);background:#fff}
+#vnForm input:focus,#vnForm select:focus,#vnForm textarea:focus{outline:none;border-color:#f4c66b;background:rgba(255,255,255,.14)!important;box-shadow:0 0 0 3px rgba(244,198,107,.2)}
+#vnForm .err{color:#ffb4a8}
+#vnForm .fld.bad input,#vnForm .fld.bad select,#vnForm .fld.bad textarea{border-color:#ff8a78}
+#vnForm .btn{background:#fff;color:var(--navy-d);border-color:#fff;border-radius:8px;padding:14px;font-size:15px;margin-top:20px!important}
+#vnForm .btn:hover{background:#f4c66b;border-color:#f4c66b}
+@media (max-width:560px){#vnForm{padding:22px}}
+#vnForm .fld p,#vnForm small,#vnForm .hint,#vnForm .note{color:#b9d3da!important}
+#vnForm label:not(.fld > label){color:#e6f1f4}
+#vnForm input[type=radio],#vnForm input[type=checkbox]{accent-color:#f4c66b}
+#vnForm input[type=file]{padding:9px 12px}
+#vnForm input[type=file]::file-selector-button{background:#fff;color:var(--navy-d);border:0;border-radius:6px;padding:7px 14px;margin-right:12px;font:600 13px var(--sans);cursor:pointer}
+#vnForm *{color:inherit}
+#vnForm .err{color:#ffb4a8}
+#vnForm .btn{color:var(--navy-d)}
+#vnForm .lbl{color:#fff}
+.vn-checks{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:6px}
+.vn-checks label{display:flex;align-items:center;gap:7px;font-size:14px;color:#e6f1f4;cursor:pointer}
+.vn-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;text-align:left}
+.vn-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.vn-step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.vn-num{display:grid;place-items:center;width:40px;height:40px;margin:0 auto 10px;border-radius:50%;background:var(--grad);color:#fff;font-family:var(--head);font-size:18px}
+.vn-step b{display:block;font-size:16px;margin-bottom:4px;color:var(--navy-d)}
+.vn-step p{font-size:14px}
+.vn-req{margin:36px auto 0;max-width:640px;text-align:left;background:#f7f3ec;border:1px solid #ece3d6;border-radius:12px;padding:20px 24px}
+.vn-req h3{font-size:18px;margin-bottom:10px;color:var(--navy-d)}
+.vn-req ul{display:grid;gap:8px;padding-left:20px}
+@media (max-width:900px){.vn-benefits{grid-template-columns:repeat(2,1fr)}.vn-steps{grid-template-columns:1fr}}
+@media (max-width:560px){.vn-benefits{grid-template-columns:1fr}}
+/* vendor hero: real fleet line-up photo */
+.vn-hero-ph{position:relative;aspect-ratio:16/10;border-radius:16px;background:url(/images/fleet/gallery/5.jpg) 30% 58%/150% auto no-repeat;box-shadow:0 18px 40px rgba(0,0,0,.35);overflow:hidden}
+.vn-hero-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,25,45,.55))}
+.vn-hero-badge{position:absolute;left:16px;bottom:14px;z-index:1;display:flex;align-items:center;gap:7px;background:#fff;color:var(--navy-d);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px}
+.tours-hero-ph{aspect-ratio:16/9;border-radius:16px;background:url(/images/tours-hero.png) center/cover no-repeat;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+
+/* ===== hero background from the catalog: bright cyan centre -> deep ocean blue edges ===== */
+:root{
+  --hero-sky:
+    radial-gradient(ellipse 22% 12% at 18% 10%, rgba(255,255,255,.35), transparent 70%),
+    radial-gradient(ellipse 16% 9% at 82% 8%, rgba(255,255,255,.28), transparent 70%),
+    radial-gradient(ellipse 70% 75% at 50% 45%, #19d4f7 0%, #06abdb 32%, #0582b3 62%, #06618f 100%);
+}
+.tours-hero,.ct-hero{background:var(--hero-sky)!important}
+.tours-hero .eyebrow,.ct-hero .eyebrow{color:#e6fbff}
+.th-chips span{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.35)}
+.th-chips svg{color:#fff3c4}
+
+/* light page heroes (Packages, Services, Fleet, …) switch to the same blue sky */
+.phero{background:var(--hero-sky)!important;border-bottom:0!important}
+.phero::before{background:linear-gradient(90deg,rgba(6,140,190,.0) 40%,rgba(6,140,190,0) 100%)!important}
+.phero .bg{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 18%);mask-image:linear-gradient(90deg,transparent 0%,#000 18%)}
+.phero h1,.phero .crumb{color:#fff!important}
+.phero p{color:#e3f6fb!important}
+
+/* contact hero: blue sky on the left, Ahmedabad photo showing on the right */
+.ct-hero{background:linear-gradient(90deg,#06618f 0%,rgba(5,130,179,.92) 35%,rgba(6,171,219,.55) 65%,rgba(25,212,247,.15) 100%),url(/images/ahmedabad-riverfront.jpg) center/cover no-repeat!important}

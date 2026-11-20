@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMeta({
 export default function PackagesPage() {
   return (
     <>
-      <section className="phero" style={{"--img": "url(/images/packages-hero.png)"} as CSSProperties}>
+      <section className="phero pk-hero" style={{"--img": "url(/images/packages-travel.png)"} as CSSProperties}>
         <div className="bg" />
         <div className="wrap">
           <h1>Packages &amp;<br />Hotel Travel</h1>

@@ -1,7 +1,6 @@
-import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarIcon, CarIcon, PinIcon, StarIcon, PhoneIcon } from "@/components/icons";
+import { CalendarIcon, CarIcon, PinIcon, StarIcon, PhoneIcon, UserIcon } from "@/components/icons";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -29,7 +28,7 @@ const TOURS: Tour[] = [
     name: "Gujarat Darshan",
     tag: "Most popular",
     days: 5,
-    img: "/images/fleet/innova/2.jpg",
+    img: "/images/tours/dwarka.jpg",
     route: ["Ahmedabad", "Dwarka", "Somnath", "Sasan Gir", "Ahmedabad"],
     vehicles: "Sedan · Innova · Tempo Traveller",
     highlights: ["Dwarkadhish Temple & Bet Dwarka", "Somnath Jyotirlinga & evening aarti", "Gir National Park safari"],
@@ -46,7 +45,7 @@ const TOURS: Tour[] = [
     name: "Statue of Unity Getaway",
     tag: "Weekend trip",
     days: 2,
-    img: "/images/fleet/suv/1.jpg",
+    img: "/images/tours/statue-of-unity.jpg",
     route: ["Ahmedabad", "Kevadia", "Ahmedabad"],
     vehicles: "Sedan · SUV · Innova",
     highlights: ["Statue of Unity viewing gallery", "Valley of Flowers & laser show", "Sardar Sarovar Dam"],
@@ -60,7 +59,7 @@ const TOURS: Tour[] = [
     name: "Rann of Kutch",
     tag: "White desert",
     days: 3,
-    img: "/images/fleet/fortuner/2.jpg",
+    img: "/images/tours/rann-of-kutch.jpg",
     route: ["Ahmedabad", "Bhuj", "Dhordo", "Ahmedabad"],
     vehicles: "SUV · Innova · Tempo Traveller",
     highlights: ["Sunset & full moon at the White Rann", "Kalo Dungar viewpoint", "Bhuj handicraft villages"],
@@ -75,7 +74,7 @@ const TOURS: Tour[] = [
     name: "Royal Rajasthan",
     tag: "Forts & palaces",
     days: 6,
-    img: "/images/fleet/innova/5.jpg",
+    img: "/images/tours/udaipur.jpg",
     route: ["Ahmedabad", "Udaipur", "Mount Abu", "Jodhpur", "Jaipur"],
     vehicles: "Innova · SUV · Tempo Traveller",
     highlights: ["City Palace & Lake Pichola, Udaipur", "Mehrangarh Fort, Jodhpur", "Amber Fort & Hawa Mahal, Jaipur"],
@@ -93,7 +92,7 @@ const TOURS: Tour[] = [
     name: "Golden Triangle",
     tag: "Delhi · Agra · Jaipur",
     days: 6,
-    img: "/images/fleet/rangerover/2.jpg",
+    img: "/images/tours/taj-mahal.jpg",
     route: ["Delhi", "Agra", "Jaipur", "Delhi"],
     vehicles: "Sedan · Innova · Luxury",
     highlights: ["Taj Mahal at sunrise", "Qutub Minar & India Gate", "Amber Fort, Jaipur"],
@@ -111,7 +110,7 @@ const TOURS: Tour[] = [
     name: "Group Pilgrimage by Bus",
     tag: "For groups & societies",
     days: 4,
-    img: "/images/fleet/bus/2.jpg",
+    img: "/images/tours/ambaji.jpg",
     route: ["Ahmedabad", "Ambaji", "Shamlaji", "Dakor", "Ahmedabad"],
     vehicles: "Tempo Traveller · Mini Bus · Bus",
     highlights: ["Ambaji Shaktipeeth", "Shamlaji Vishnu Temple", "Ranchhodraiji Temple, Dakor"],
@@ -127,23 +126,53 @@ const TOURS: Tour[] = [
 export default function ToursPage() {
   return (
     <>
-      <section className="phero" style={{ "--img": "url(/images/fleet/gallery/5.jpg)" } as CSSProperties}>
-        <div className="bg" />
-        <div className="wrap">
-          <div className="crumb">Ready-made trips &middot; Car or bus with driver &middot; From Ahmedabad</div>
-          <h1>Tour Packages</h1>
-          <p>Pick a ready-made trip and we will handle the vehicle, driver and route. Every package can be changed to suit your dates and group size.</p>
+      <section className="tours-hero">
+        <div className="wrap tours-hero-in">
+          <div>
+            <div className="eyebrow">Ready-made trips &middot; Car or bus with driver</div>
+            <h1>Tour Packages</h1>
+            <p>Pick a ready-made trip and we will handle the vehicle, driver and route. Every package can be changed to suit your dates and group size.</p>
+            <div className="th-chips">
+              <span><CalendarIcon bare size={16} /> {TOURS.length} ready-made tours</span>
+              <span><PinIcon bare size={16} /> Gujarat · Rajasthan · North India</span>
+              <span><CarIcon bare size={16} /> Sedan to Bus</span>
+            </div>
+            <div className="btns">
+              <a className="btn" href="#packages">View Packages &darr;</a>
+              <Link className="btn ghost" href="/book?service=outstation">Plan a Custom Trip</Link>
+            </div>
+          </div>
+          <div className="tours-hero-ph" aria-hidden="true" />
         </div>
       </section>
 
       <section className="sec white">
         <div className="wrap">
-          <div className="tour-grid">
+          <div className="tour-grid" id="packages">
             {TOURS.map((t) => (
               <article key={t.id} className="tour" id={t.id}>
-                <div className="tour-ph" style={{ backgroundImage: `url(${t.img})` }}>
-                  <span className="tour-tag">{t.tag}</span>
-                  <span className="tour-days"><CalendarIcon /> {t.days} {t.days === 1 ? "Day" : "Days"}</span>
+                <div className="poster" style={{ backgroundImage: `url(${t.img})` }}>
+                  <div className="poster-top">
+                    <span className="poster-brand">Shital Tours &amp; Travels</span>
+                    <span className="poster-tag">{t.tag}</span>
+                  </div>
+                  <div className="poster-mid">
+                    <span className="poster-kicker">Explore</span>
+                    <h3 className="poster-title">{t.name}</h3>
+                    <span className="poster-ribbon">
+                      {t.days > 1 ? `${t.days - 1} ${t.days - 1 === 1 ? "Night" : "Nights"} / ` : ""}{t.days} {t.days === 1 ? "Day" : "Days"}
+                    </span>
+                  </div>
+                  <div className="poster-inc">
+                    <span><CarIcon bare size={18} />AC Vehicle</span>
+                    <span><UserIcon bare size={18} />Expert Driver</span>
+                    <span><PinIcon bare size={18} />Sightseeing</span>
+                    <span><CalendarIcon bare size={18} />Flexible Dates</span>
+                  </div>
+                  <div className="poster-price">
+                    <small>Price</small>
+                    <b>On Request</b>
+                  </div>
                 </div>
                 <div className="tour-body">
                   <h3>{t.name}</h3>

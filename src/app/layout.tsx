@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Source_Serif_4, Montserrat, Archivo_Black, Exo_2 } from "next/font/google";
+import { Inter, Source_Serif_4, Montserrat, Archivo_Black, Exo_2, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -21,6 +21,8 @@ const heading = Montserrat({
 
 // headings
 const archivo = Archivo_Black({ subsets: ["latin"], weight: "400", variable: "--font-archivo", display: "swap" });
+// script titles on tour posters
+const script = Dancing_Script({ subsets: ["latin"], variable: "--font-script", display: "swap" });
 // body / content text
 const exo = Exo_2({ subsets: ["latin"], variable: "--font-exo", display: "swap" });
 
@@ -35,14 +37,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: SITE_NAME, template: `%s — ${SITE_NAME}` },
   description: "Cars and buses for hotel guests, airport transfers, local journeys and group travel in Ahmedabad.",
-  icons: { icon: "/images/logo.png", apple: "/images/logo.png" },
+  icons: { icon: "/images/logo-round.jpg", apple: "/images/logo-round.jpg" },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${serif.variable} ${heading.variable} ${archivo.variable} ${exo.variable}`}>
+    <html lang="en" className={`${inter.variable} ${serif.variable} ${heading.variable} ${archivo.variable} ${exo.variable} ${script.variable}`}>
       <head>
         {/* BBH Bogle (short headings / eyebrows) is not in next/font yet, so load it from Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

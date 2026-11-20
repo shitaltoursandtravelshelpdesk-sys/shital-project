@@ -1,8 +1,7 @@
-import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { BookingForm } from "@/components/forms/BookingForm";
-import { CalendarIcon, CarIcon, ChatIcon, ClipboardIcon, HotelIcon, MailIcon, PhoneIcon } from "@/components/icons";
+import { CalendarIcon, CarIcon, ChatIcon, ClipboardIcon, HeadsetIcon, HotelIcon, MailIcon, PhoneIcon, ShieldIcon } from "@/components/icons";
 import { BizItem, BizText } from "@/components/ui/BizLink";
 import { pageMeta } from "@/lib/seo";
 
@@ -15,13 +14,34 @@ export const metadata: Metadata = pageMeta({
 export default function BookPage() {
   return (
     <>
-      <section className="phero" style={{ "--img": "url(/images/ahmedabad-riverfront.jpg)" } as CSSProperties}>
-        <div className="bg" />
-        <div className="phero-car" aria-hidden="true" />
-        <div className="wrap">
-          <div className="crumb">Safe journeys &middot; Comfortable rides &middot; With the experts</div>
-          <h1>Request a Vehicle</h1>
-          <p>Tell us when and where you need to travel. Our team will review your request and confirm a vehicle and driver.</p>
+      <section className="tours-hero">
+        <div className="wrap tours-hero-in">
+          <div>
+            <div className="eyebrow">Safe journeys &middot; Comfortable rides</div>
+            <h1>Request a Vehicle</h1>
+            <p>Tell us when and where you need to travel. Our team will review your request and confirm a vehicle and driver.</p>
+            <div className="th-chips">
+              <span><CarIcon bare size={16} /> Sedan, SUV, Innova, Tempo &amp; Bus</span>
+              <span><ShieldIcon bare size={16} /> Verified drivers</span>
+              <span><HeadsetIcon bare size={16} /> 24/7 support</span>
+            </div>
+            <div className="btns">
+              <a className="btn" href="#reqForm">Fill Trip Details &darr;</a>
+              <a className="btn ghost" href="/fleet">See Our Fleet</a>
+            </div>
+          </div>
+          <div className="th-collage hotel-grid" aria-hidden="true">
+            {[
+              ["Hyatt Ahmedabad", "/images/hotels/hyatt.png"],
+              ["ITC Narmada", "/images/hotels/itc-narmada.png"],
+              ["Fortune Landmark", "/images/hotels/fortune-landmark.png"],
+              ["Crowne Plaza", "/images/hotels/crowne-plaza.png"],
+            ].map(([name, img]) => (
+              <div key={name} className="th-ph" style={{ backgroundImage: `url(${img})` }}>
+                <span>{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@ export const SITE_LINKS: [href: string, label: string][] = [
   ["/services", "Services"],
   ["/packages", "Packages"],
   ["/tours", "Tours"],
+  ["/vendor", "Vendors"],
   ["/book", "Book a Vehicle"],
   ["/fleet", "Our Fleet"],
   ["/drive", "Drive With Us"],
