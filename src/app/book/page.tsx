@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMeta({
 export default function BookPage() {
   return (
     <>
-      <section className="tours-hero">
+      <section className="tours-hero th-full vn-full">
         <div className="wrap tours-hero-in">
           <div>
             <div className="eyebrow">Safe journeys &middot; Comfortable rides</div>
@@ -30,17 +30,8 @@ export default function BookPage() {
               <a className="btn ghost" href="/fleet">See Our Fleet</a>
             </div>
           </div>
-          <div className="th-collage hotel-grid" aria-hidden="true">
-            {[
-              ["Hyatt Ahmedabad", "/images/hotels/hyatt.png"],
-              ["ITC Narmada", "/images/hotels/itc-narmada.png"],
-              ["Fortune Landmark", "/images/hotels/fortune-landmark.png"],
-              ["Crowne Plaza", "/images/hotels/crowne-plaza.png"],
-            ].map(([name, img]) => (
-              <div key={name} className="th-ph" style={{ backgroundImage: `url(${img})` }}>
-                <span>{name}</span>
-              </div>
-            ))}
+          <div className="vn-hero-ph" aria-hidden="true">
+            <span className="vn-hero-badge"><CarIcon bare size={16} /> Our growing fleet</span>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CarIcon, BusIcon, HotelIcon, CardIcon, ShieldIcon, StarIcon, CalendarIcon } from "@/components/icons";
+import { CarIcon, BusIcon, HotelIcon } from "@/components/icons";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -53,15 +53,7 @@ export default function CareersPage() {
 
       <section className="sec soft">
         <div className="wrap center">
-          <div className="eyebrow">Why Drive With Us</div>
-          <h2 className="sec-title">Benefits of joining Shital</h2>
-          <div className="svc4">
-            <div className="it"><div className="ic"><CardIcon size={"26"} bare /></div><h3>Timely Payment</h3><p>Regular salary plus daily driver allowance on trips.</p></div>
-            <div className="it"><div className="ic"><ShieldIcon size={"26"} bare /></div><h3>Well-kept Vehicles</h3><p>Drive clean, well-maintained cars and buses.</p></div>
-            <div className="it"><div className="ic"><StarIcon size={"26"} bare /></div><h3>Respected Clients</h3><p>Work with leading hotels and their guests.</p></div>
-            <div className="it"><div className="ic"><CalendarIcon size={"26"} bare /></div><h3>Steady Work</h3><p>Regular trips across the city and outstation.</p></div>
-          </div>
-          <Link className="btn" style={{marginTop: "26px"}} href="/drive#dwForm">Apply for a Driver Role &rarr;</Link>
+          <Link className="btn" href="/drive#dwForm">Apply for a Driver Role &rarr;</Link>
         </div>
       </section>
     </>

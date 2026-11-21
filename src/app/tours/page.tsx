@@ -126,7 +126,7 @@ const TOURS: Tour[] = [
 export default function ToursPage() {
   return (
     <>
-      <section className="tours-hero">
+      <section className="tours-hero th-full">
         <div className="wrap tours-hero-in">
           <div>
             <div className="eyebrow">Ready-made trips &middot; Car or bus with driver</div>
@@ -168,10 +168,6 @@ export default function ToursPage() {
                     <span><UserIcon bare size={18} />Expert Driver</span>
                     <span><PinIcon bare size={18} />Sightseeing</span>
                     <span><CalendarIcon bare size={18} />Flexible Dates</span>
-                  </div>
-                  <div className="poster-price">
-                    <small>Price</small>
-                    <b>On Request</b>
                   </div>
                 </div>
                 <div className="tour-body">

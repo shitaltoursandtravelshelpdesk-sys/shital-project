@@ -3,6 +3,7 @@ import { BIZ } from "@/lib/config";
 import { BizLink } from "@/components/ui/BizLink";
 import { ChatIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { Logo } from "./Logo";
+import { Social } from "./Social";
 import { SITE_LINKS } from "./nav";
 
 export function Footer() {
@@ -39,6 +40,7 @@ export function Footer() {
             <span>
               <PinIcon /> <BizLink type="office">{BIZ.office}</BizLink>
             </span>
+            <Social />
           </div>
         </div>
       </div>

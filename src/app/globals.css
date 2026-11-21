@@ -908,3 +908,192 @@ h1,h2,h3,h4,h5,.sec-title{font-family:var(--head)!important;font-weight:400!impo
 
 /* contact hero: blue sky on the left, Ahmedabad photo showing on the right */
 .ct-hero{background:linear-gradient(90deg,#06618f 0%,rgba(5,130,179,.92) 35%,rgba(6,171,219,.55) 65%,rgba(25,212,247,.15) 100%),url(/images/ahmedabad-riverfront.jpg) center/cover no-repeat!important}
+
+/* home "Why travel with Shital?" card: compact */
+.lookfor{margin-top:-60px;padding-bottom:10px}
+.lookfor-card{padding:18px 22px}
+.why-head{margin-bottom:12px}
+.why-head h2{font-size:20px}
+.why-head .btn{padding:8px 16px;font-size:13px}
+.pop-grid{gap:10px}
+.pop-it{aspect-ratio:16/9;border-radius:8px}
+.pop-it b{font-size:12.5px;left:10px;bottom:7px}
+.pop-ic{width:28px;height:28px;top:7px;left:7px}
+.pop-ic svg{width:15px;height:15px}
+.hdr .btn{padding:7px 14px;font-size:13.5px;gap:6px}
+.hdr .hdr-right .btn{padding:5px 12px!important;font-size:13px!important;gap:5px!important;line-height:1.2;min-height:0;border-radius:6px}
+.hdr .hdr-right .btn svg{width:15px;height:15px}
+/* slimmer navbar */
+@media (min-width:1001px){.hdr .wrap{height:58px}.hdr .logo{margin-top:6px}.hdr .logo img{height:96px}}
+
+/* compact footer */
+.ftr .wrap.fwrap{padding-top:28px;padding-bottom:20px;gap:40px}
+.ftr .fwrap .cols{gap:32px}
+.ftr .cols>div:first-child{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;align-content:start}
+.ftr .cols>div:first-child h5{grid-column:1/-1}
+.ftr .cols>div>a{margin-bottom:6px}
+.ftr .cols h5{margin-bottom:10px}
+.ftr .cols span{margin-bottom:7px}
+.fbrand p{margin-top:10px}
+.fbrand .logo.light img{height:60px}
+.ftr .bottom{padding-top:10px!important;padding-bottom:10px!important}
+/* clients section: tighter */
+.sec.clients{padding:22px 0 18px!important}
+.clients .sec-title{margin:2px 0 0;font-size:26px}
+.client-marquee{margin-top:14px}
+.client-logo{height:82px;padding:12px 20px}
+.lookfor{padding-bottom:0}
+/* home: features marquee section, tighter */
+#contact{padding:18px 0!important}
+#contact .why-marquee{margin:0}
+.logo img,.hdr .logo img{border:0!important;clip-path:circle(48.5% at 50% 50%)}
+.lookfor-card{background:linear-gradient(135deg,#E6D9C7 0%,#CFC0AC 35%,#B8A995 65%,#9C8F7C 100%)!important}
+/* page background (all beige areas): user's khaki gradient */
+body{background:linear-gradient(135deg,#E6D9C7 0%,#CFC0AC 35%,#B8A995 65%,#9C8F7C 100%) fixed!important}
+.pkg{background:linear-gradient(135deg,#E6D9C7 0%,#CFC0AC 35%,#B8A995 65%,#9C8F7C 100%)!important;border-color:#b8a995!important}
+
+/* champagne "spotlight" shade (XUV700 poster style) */
+:root{
+  --champagne:
+    linear-gradient(118deg,transparent 38%,rgba(255,255,255,.22) 47%,rgba(255,255,255,.05) 53%,transparent 60%),
+    radial-gradient(ellipse 75% 60% at 35% 22%,#f6efe4 0%,#e6dccb 30%,#cfc1ab 58%,#ad9c84 85%,#968672 100%);
+}
+body{background:var(--champagne) fixed!important}
+.lookfor-card,.pkg{background:var(--champagne)!important}
+/* champagne shade on all cream cards */
+#reqForm,.tour,.vc,.card,.job,.ct-cards .it,.vn-step,.dw-box,.why-it{background:var(--champagne)!important;border-color:#c9b9a2!important}
+/* inputs inside champagne cards stay light so they read as fields */
+#reqForm input[type=text],#reqForm input[type=email],#reqForm input[type=tel],#reqForm input[type=date],#reqForm input[type=time],#reqForm input[type=number],#reqForm select,#reqForm textarea{background:rgba(255,255,255,.7)!important;border-color:#c9b9a2}
+.job{border-top-color:var(--teal)!important}
+.fbrand .logo img,.fbrand .logo.light img{height:120px!important}
+.poster-tag{background:var(--grad)!important;color:#fff!important;border:1px solid rgba(255,255,255,.35)}
+/* packages hero: height follows the image ratio (1672x941) so the whole picture shows */
+@media (min-width:1001px){
+  .pk-hero{min-height:calc(56vw * 941 / 1672)!important}
+  .pk-hero .wrap{padding-top:24px!important;padding-bottom:24px!important}
+  .pk-hero .bg{background-size:cover!important;background-position:center!important}
+}
+/* packages hero: smaller (image takes 44% width, height follows its ratio) */
+@media (min-width:1001px){
+  .pk-hero{min-height:calc(44vw * 941 / 1672)!important}
+  .pk-hero .bg{left:56%!important}
+  .pk-hero h1{font-size:40px}
+  .pk-hero p{font-size:15px;max-width:520px}
+}
+
+/* real-looking clouds on the blue heroes (replaces the blurry white blobs) */
+:root{
+  --hero-sky: radial-gradient(ellipse 70% 75% at 50% 45%,#19d4f7 0%,#06abdb 32%,#0582b3 62%,#06618f 100%);
+}
+.tours-hero,.phero,.ct-hero{position:relative}
+.tours-hero::before,.pk-hero::after,.phero:not(.pk-hero)::after{content:"";position:absolute;left:0;top:0;width:60%;height:230px;background:url(/images/clouds.svg) left top/100% auto no-repeat;pointer-events:none;z-index:1}
+.tours-hero-in,.phero .wrap{position:relative;z-index:2}
+/* tours/book/vendor heroes: clouds stay in the top strip, behind the text */
+.tours-hero{isolation:isolate;padding-top:96px!important}
+.tours-hero::before{height:150px!important;width:55%!important;z-index:0!important;opacity:.9}
+.tours-hero .tours-hero-in{position:relative!important;z-index:2!important}
+/* packages/services/fleet heroes: clouds in the top strip, text below them */
+.phero{isolation:isolate}
+.pk-hero::after,.phero:not(.pk-hero)::after{height:130px!important;width:50%!important;z-index:0!important;opacity:.9}
+.phero .wrap{position:relative!important;z-index:2!important}
+@media (min-width:1001px){.pk-hero .wrap{padding-top:110px!important}}
+.phero:not(.pk-hero) .wrap{padding-top:96px!important}
+/* tours hero: full-bleed image on the right, fading into the blue (like Packages) */
+@media (min-width:1001px){
+  .th-full{min-height:calc(44vw * 941 / 1672);display:flex;align-items:center;padding-top:110px!important;padding-bottom:40px!important;overflow:hidden}
+  .th-full .tours-hero-in{grid-template-columns:1fr}
+  .th-full .tours-hero-in > div:first-child{max-width:560px}
+  .th-full .tours-hero-ph{position:absolute;top:0;right:0;bottom:0;left:56%;aspect-ratio:auto;border-radius:0;box-shadow:none;z-index:1;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%);mask-image:linear-gradient(90deg,transparent 0%,#000 22%)}
+  .th-full h1{font-size:44px}
+}
+@media (min-width:1001px){
+  .th-full{display:block!important;position:relative}
+  .th-full .tours-hero-in{position:static!important;width:100%}
+  .th-full .tours-hero-in > div:first-child{position:relative;z-index:2}
+  .th-full .tours-hero-ph{z-index:1!important}
+}
+@media (min-width:1001px){
+  .th-full{padding-top:92px!important;padding-bottom:28px!important}
+  .th-full .tours-hero-ph{left:47%!important;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 16%)!important;mask-image:linear-gradient(90deg,transparent 0%,#000 16%)!important}
+}
+/* tours hero: smaller */
+@media (min-width:1001px){
+  .th-full{padding-top:78px!important;padding-bottom:18px!important;min-height:0!important}
+  .th-full h1{font-size:36px!important;margin:4px 0 8px!important}
+  .th-full p{font-size:14px!important;margin-bottom:12px!important}
+  .th-full .th-chips{margin-bottom:14px;gap:8px}
+  .th-full .th-chips span{padding:5px 11px;font-size:12.5px}
+  .th-full .btn{padding:8px 16px;font-size:13.5px}
+  .th-full .tours-hero-ph{left:52%!important}
+}
+@media (min-width:1001px){.th-full .tours-hero-ph{background-position:center 22%!important}.th-full{min-height:360px!important}}
+
+/* vendor hero: full-bleed fleet photo like tours */
+@media (min-width:1001px){
+  .vn-full .vn-hero-ph{position:absolute!important;top:0;right:0;bottom:0;left:50%!important;height:auto!important;border-radius:0!important;box-shadow:none!important;z-index:1!important;background-position:center 60%!important;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 18%);mask-image:linear-gradient(90deg,transparent 0%,#000 18%)}
+  .vn-full .vn-hero-badge{left:auto!important;right:24px}
+}
+
+/* vendor hero: compact */
+@media (min-width:1001px){
+  .vn-small{padding-top:78px!important;padding-bottom:22px!important;min-height:0!important}
+  .vn-small h1{font-size:36px!important}
+  .vn-small p{font-size:14px!important}
+  .vn-small .th-chips span{padding:5px 11px;font-size:12.5px}
+  .vn-small .btn{padding:8px 16px;font-size:13.5px}
+  .vn-small .hotel-grid{width:100%;max-width:460px;margin-left:auto;gap:10px!important}
+  .vn-small .hotel-grid{grid-template-rows:125px 125px!important}
+  .vn-small .hotel-grid .th-ph span{font-size:13px!important}
+}
+
+/* fleet card: price + Book now in top-right corner */
+@media (min-width:821px){
+  .vc .b{position:relative}
+  .vc .foot{position:absolute;top:22px;right:22px;margin:0!important;padding:0!important;border:0!important;flex-direction:column!important;align-items:flex-end!important;gap:8px;text-align:right}
+  .vc .b h3,.vc .tags,.vc ul{padding-right:190px}
+  .vc ul{margin-bottom:0}
+}
+@media (min-width:821px){.vc .foot{top:50%!important;transform:translateY(-50%);right:28px!important}}
+
+/* services top: tighter top space, proper gap under eyebrow */
+.svc-top{padding-top:56px!important}
+.sec .eyebrow{margin-bottom:10px!important}
+
+/* section eyebrow: pill badge with side lines */
+.sec .center > .eyebrow,.sec.center .eyebrow,.wrap.center > .eyebrow{display:inline-flex!important;align-items:center;gap:12px;color:var(--navy-d)!important;letter-spacing:.14em;font-size:13px!important}
+.wrap.center > .eyebrow::before,.wrap.center > .eyebrow::after{content:"";width:38px;height:2px;border-radius:2px;background:var(--grad)}
+.wrap.center > .eyebrow{background:rgba(255,255,255,.55);border:1px solid rgba(12,107,134,.18);padding:6px 16px;border-radius:30px;box-shadow:0 4px 14px rgba(12,107,134,.08)}
+.wrap.center > .eyebrow{font-family:var(--font-heading),sans-serif!important;font-weight:700!important;font-size:12.5px!important;letter-spacing:.2em;text-transform:uppercase}
+
+/* all eyebrow headings: same pill style everywhere */
+.eyebrow{display:inline-flex!important;align-items:center;gap:12px;width:auto!important;font-family:var(--font-heading),sans-serif!important;font-weight:700!important;font-size:12.5px!important;letter-spacing:.2em!important;text-transform:uppercase;color:var(--navy-d)!important;background:rgba(255,255,255,.55);border:1px solid rgba(12,107,134,.18);padding:6px 16px;border-radius:30px;box-shadow:0 4px 14px rgba(12,107,134,.08)}
+.eyebrow::before,.eyebrow::after{content:""!important;display:block!important;width:38px;height:2px;border-radius:2px;background:var(--grad)!important;position:static!important;margin:0!important}
+.tours-hero .eyebrow,.phero .eyebrow,.hero2 .eyebrow,.hotel-band .eyebrow{color:#fff!important;background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+.tours-hero .eyebrow::before,.tours-hero .eyebrow::after,.phero .eyebrow::before,.phero .eyebrow::after,.hero2 .eyebrow::before,.hero2 .eyebrow::after,.hotel-band .eyebrow::before,.hotel-band .eyebrow::after{background:#fff!important;width:22px}
+.eyebrow::before,.eyebrow::after{display:none!important;content:none!important}
+.hotel-band .eyebrow{color:#111!important;background:rgba(255,255,255,.55)!important;border-color:rgba(0,0,0,.15)!important}
+.svc-top{padding-top:34px!important;padding-bottom:28px!important}
+.svc-top .wrap{padding-left:12px!important;padding-right:12px!important}
+.svc-top .sec-title{margin-bottom:18px!important}
+
+/* vendor partners: full name list */
+.vn-partners{padding:34px 0!important}
+.vn-pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:18px}
+.vn-p{background:#fff;border:1px solid #c9b9a2;border-radius:12px;padding:18px 14px;font-family:var(--head);font-size:16px;color:var(--navy-d);display:grid;place-items:center;text-align:center;min-height:70px;box-shadow:0 4px 14px rgba(12,107,134,.08)}
+.vn-p{display:flex!important;flex-direction:column;gap:10px;min-height:150px!important}
+.vn-plogo{max-width:85%;height:70px;object-fit:contain}
+.vn-pini{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-size:22px}
+.vn-p span:last-child{font-size:14.5px}
+
+/* client logos in full colour */
+.client-logo,.client-logo img,.client-logo *{filter:none!important;opacity:1!important}
+
+/* social icons */
+.social{display:flex;gap:10px;margin-top:14px}
+.social a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .2s}
+.social a:hover{transform:translateY(-3px) scale(1.06)}
+.ftr .social{display:flex!important;flex-direction:row!important;gap:10px;margin-top:14px}
+.ftr .social a{display:grid!important;place-items:center!important;width:38px!important;height:38px!important;padding:0!important;margin:0!important;line-height:0!important}
+.ftr .social a svg{display:block;margin:0!important;width:20px;height:20px}
+.ftr .social{padding-left:44px}

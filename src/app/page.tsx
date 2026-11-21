@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PhoneIcon, ChatIcon, MailIcon, PinIcon, CalendarIcon, CarIcon, PlaneIcon, HotelIcon, RoadIcon, BusIcon, HeadsetIcon, UserIcon, ShieldIcon, StarIcon } from "@/components/icons";
+import { MailIcon, PinIcon, CalendarIcon, CarIcon, PlaneIcon, HotelIcon, RoadIcon, BusIcon, HeadsetIcon, UserIcon, ShieldIcon, StarIcon } from "@/components/icons";
 import type { ReactNode } from "react";
-import { BizItem, BizText } from "@/components/ui/BizLink";
 import { pageMeta } from "@/lib/seo";
-import { EnquiryButton } from "@/components/ui/EnquiryButton";
 import { ClientLogos } from "@/components/ClientLogos";
 
 const WHY: [ReactNode, string, string][] = [
@@ -34,6 +32,7 @@ export default function HomePage() {
           <div className="btns">
             <Link className="btn" href="/book"><CalendarIcon /> Request a Vehicle &rarr;</Link>
             <Link className="btn ghost light" href="/fleet"><CarIcon /> View Our Fleet</Link>
+            <Link className="btn ghost light" href="/contact"><MailIcon /> Send an Enquiry &rarr;</Link>
           </div>
         </div>
       </section>
@@ -79,14 +78,6 @@ export default function HomePage() {
       
       <section className="sec soft" id="contact" style={{paddingBottom: "40px"}}>
         <div className="wrap center">
-          <div className="eyebrow">Contact Our Team</div>
-          <h2 className="sec-title">We&apos;re here to help with your travel plans</h2>
-          <div className="contact4">
-            <BizItem type="phone"><div className="ic"><PhoneIcon /></div><b>Phone</b><BizText type="phone" /></BizItem>
-            <BizItem type="whatsapp"><div className="ic"><ChatIcon /></div><b>WhatsApp</b><BizText type="whatsapp" /></BizItem>
-            <BizItem type="email"><div className="ic"><MailIcon /></div><b>Email</b><BizText type="email" /></BizItem>
-            <BizItem type="office"><div className="ic"><PinIcon /></div><b>Office</b><BizText type="office" /></BizItem>
-          </div>
           <div className="why-marquee" aria-label="Why travel with Shital">
             <div className="why-track">
               {[...WHY, ...WHY].map(([ic, t, d], i) => (
@@ -97,7 +88,6 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <EnquiryButton />
         </div>
       </section>
     </>

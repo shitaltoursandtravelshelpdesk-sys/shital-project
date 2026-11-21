@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { PartnerLogo } from "@/components/PartnerLogo";
 import { VendorForm } from "@/components/forms/VendorForm";
-import { CalendarIcon, CardIcon, CarIcon, HeadsetIcon, ShieldIcon, UsersIcon } from "@/components/icons";
+import { CarIcon, HeadsetIcon, PinIcon, ShieldIcon, UserIcon } from "@/components/icons";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -11,23 +12,33 @@ export const metadata: Metadata = pageMeta({
 });
 
 const BENEFITS: [ReactNode, string, string][] = [
-  [<CalendarIcon key="a" bare size={22} />, "Regular bookings", "Steady trips from hotel guests, corporates, tourists and groups."],
-  [<CardIcon key="b" bare size={22} />, "On-time payments", "Clear rates agreed in advance and timely settlement."],
-  [<UsersIcon key="c" bare size={22} />, "Bigger customer base", "Reach hotels and companies we already work with."],
+  [<PinIcon key="a" bare size={22} />, "Regular bookings", "Steady trips from hotel guests, corporates, tourists and groups."],
+  [<ShieldIcon key="b" bare size={22} />, "On-time payments", "Clear rates agreed in advance and timely settlement."],
+  [<UserIcon key="c" bare size={22} />, "Bigger customer base", "Reach hotels and companies we already work with."],
   [<HeadsetIcon key="d" bare size={22} />, "Support from our team", "Our operations team handles bookings and customer calls."],
 ];
 
-const STEPS = [
-  ["Register", "Fill the form below with your details and vehicles."],
-  ["Verification", "We check your vehicle papers, permit and insurance."],
-  ["Start earning", "Get trips assigned as per your vehicle and availability."],
-];
 
+
+// Partner names shown on the page. Add or remove names here.
+// Put each logo in public/images/partners/ with the file name given here.
+const PARTNERS: [string, string][] = [
+  ["Adani Group", "adani.png"],
+  ["Ratnamani", "ratnamani.png"],
+  ["The Leela Gandhinagar", "leela.png"],
+  ["ONGC", "ongc.png"],
+  ["Torrent", "torrent.png"],
+  ["Gandhinagar Railway", "gandhinagar-railway.png"],
+  ["Crowne Plaza", "crowne-plaza.svg"],
+  ["ITC Hotels", "club-itc.png"],
+  ["Hyatt Ahmedabad", "hyatt.png"],
+  ["Fortune Landmark", "fortune.png"],
+];
 
 export default function VendorPage() {
   return (
     <>
-      <section className="tours-hero">
+      <section className="tours-hero vn-small">
         <div className="wrap tours-hero-in">
           <div>
             <div className="eyebrow">Partner with us</div>
@@ -41,8 +52,17 @@ export default function VendorPage() {
               <a className="btn" href="#vnForm">Register Now &darr;</a>
             </div>
           </div>
-          <div className="vn-hero-ph" aria-hidden="true">
-            <span className="vn-hero-badge"><CarIcon bare size={16} /> Our growing fleet</span>
+          <div className="th-collage hotel-grid" aria-hidden="true">
+            {[
+              ["Hyatt Ahmedabad", "/images/hotels/hyatt.png"],
+              ["ITC Narmada", "/images/hotels/itc-narmada.png"],
+              ["Fortune Landmark", "/images/hotels/fortune-landmark.png"],
+              ["Crowne Plaza", "/images/hotels/crowne-plaza.png"],
+            ].map(([name, img]) => (
+              <div key={name} className="th-ph" style={{ backgroundImage: `url(${img})` }}>
+                <span>{name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -59,25 +79,20 @@ export default function VendorPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="vn-steps">
-            {STEPS.map(([t, d], i) => (
-              <div key={t} className="vn-step">
-                <span className="vn-num">{i + 1}</span>
-                <b>{t}</b>
-                <p>{d}</p>
+      <section className="sec vn-partners">
+        <div className="wrap center">
+          <div className="eyebrow">Our Partners</div>
+          <h2 className="sec-title">Trusted by leading companies</h2>
+          <div className="vn-pgrid">
+            {PARTNERS.map(([n, f]) => (
+              <div key={n} className="vn-p">
+                <PartnerLogo name={n} file={f} />
+                <span>{n}</span>
               </div>
             ))}
-          </div>
-
-          <div className="vn-req">
-            <h3>What you need</h3>
-            <ul>
-              <li>Vehicle RC, valid insurance and PUC</li>
-              <li>Tourist / commercial permit (state or all-India)</li>
-              <li>Clean, well-maintained AC vehicle</li>
-              <li>Experienced driver with valid licence (if driver is provided)</li>
-            </ul>
           </div>
         </div>
       </section>

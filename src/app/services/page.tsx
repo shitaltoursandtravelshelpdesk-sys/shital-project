@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMeta({
 export default function ServicesPage() {
   return (
     <>
-      <section className="sec soft">
+      <section className="sec soft svc-top">
         <div className="wrap center">
           <div className="eyebrow">Our Services</div>
           <h2 className="sec-title">Travel solutions for every need</h2>
