@@ -1097,3 +1097,18 @@ body{background:var(--champagne) fixed!important}
 .ftr .social a{display:grid!important;place-items:center!important;width:38px!important;height:38px!important;padding:0!important;margin:0!important;line-height:0!important}
 .ftr .social a svg{display:block;margin:0!important;width:20px;height:20px}
 .ftr .social{padding-left:44px}
+.tour:hover{transform:none!important}
+.poster-brand{display:inline-flex;align-items:center;gap:5px}
+
+/* home about image: show the whole picture */
+.about-img{height:auto!important;min-height:0!important;aspect-ratio:1672/941;background-size:100% 100%!important;background-position:center!important;align-self:center}
+#about::before{background:linear-gradient(90deg,rgba(14,140,190,.40) 0%,rgba(205,236,248,.85) 50%,rgba(220,242,250,.94) 100%)!important}
+
+/* about: catalog cyan background */
+#about{background:var(--hero-sky)!important}
+#about::before{display:none!important}
+#about h2,#about p,#about .sec-title{color:#fff!important}
+#about .eyebrow{color:#fff!important;background:rgba(255,255,255,.14)!important;border-color:rgba(255,255,255,.35)!important}
+#about{background:url(/images/fleet/gallery/5.jpg) center 60%/cover no-repeat!important}
+#about::before{display:block!important;background:radial-gradient(ellipse 70% 75% at 50% 45%,rgba(25,212,247,.72) 0%,rgba(6,171,219,.80) 32%,rgba(5,130,179,.86) 62%,rgba(6,97,143,.92) 100%)!important}
+#about::before{background:linear-gradient(115deg,rgba(10,47,82,.90) 0%,rgba(13,74,115,.85) 35%,rgba(15,106,133,.80) 70%,rgba(19,138,144,.78) 100%)!important}

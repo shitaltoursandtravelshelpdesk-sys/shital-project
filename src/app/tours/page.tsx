@@ -15,6 +15,7 @@ type Tour = {
   tag: string;
   days: number;
   img: string;
+  place: string;
   route: string[];
   vehicles: string;
   highlights: string[];
@@ -29,6 +30,7 @@ const TOURS: Tour[] = [
     tag: "Most popular",
     days: 5,
     img: "/images/tours/dwarka.jpg",
+    place: "Dwarkadhish Temple, Dwarka",
     route: ["Ahmedabad", "Dwarka", "Somnath", "Sasan Gir", "Ahmedabad"],
     vehicles: "Sedan · Innova · Tempo Traveller",
     highlights: ["Dwarkadhish Temple & Bet Dwarka", "Somnath Jyotirlinga & evening aarti", "Gir National Park safari"],
@@ -46,6 +48,7 @@ const TOURS: Tour[] = [
     tag: "Weekend trip",
     days: 2,
     img: "/images/tours/statue-of-unity.jpg",
+    place: "Statue of Unity, Kevadia",
     route: ["Ahmedabad", "Kevadia", "Ahmedabad"],
     vehicles: "Sedan · SUV · Innova",
     highlights: ["Statue of Unity viewing gallery", "Valley of Flowers & laser show", "Sardar Sarovar Dam"],
@@ -60,6 +63,7 @@ const TOURS: Tour[] = [
     tag: "White desert",
     days: 3,
     img: "/images/tours/rann-of-kutch.jpg",
+    place: "White Rann, Kutch",
     route: ["Ahmedabad", "Bhuj", "Dhordo", "Ahmedabad"],
     vehicles: "SUV · Innova · Tempo Traveller",
     highlights: ["Sunset & full moon at the White Rann", "Kalo Dungar viewpoint", "Bhuj handicraft villages"],
@@ -75,6 +79,7 @@ const TOURS: Tour[] = [
     tag: "Forts & palaces",
     days: 6,
     img: "/images/tours/udaipur.jpg",
+    place: "City Palace, Udaipur",
     route: ["Ahmedabad", "Udaipur", "Mount Abu", "Jodhpur", "Jaipur"],
     vehicles: "Innova · SUV · Tempo Traveller",
     highlights: ["City Palace & Lake Pichola, Udaipur", "Mehrangarh Fort, Jodhpur", "Amber Fort & Hawa Mahal, Jaipur"],
@@ -93,6 +98,7 @@ const TOURS: Tour[] = [
     tag: "Delhi · Agra · Jaipur",
     days: 6,
     img: "/images/tours/taj-mahal.jpg",
+    place: "Taj Mahal, Agra",
     route: ["Delhi", "Agra", "Jaipur", "Delhi"],
     vehicles: "Sedan · Innova · Luxury",
     highlights: ["Taj Mahal at sunrise", "Qutub Minar & India Gate", "Amber Fort, Jaipur"],
@@ -111,6 +117,7 @@ const TOURS: Tour[] = [
     tag: "For groups & societies",
     days: 4,
     img: "/images/tours/ambaji.jpg",
+    place: "Ambaji Temple",
     route: ["Ahmedabad", "Ambaji", "Shamlaji", "Dakor", "Ahmedabad"],
     vehicles: "Tempo Traveller · Mini Bus · Bus",
     highlights: ["Ambaji Shaktipeeth", "Shamlaji Vishnu Temple", "Ranchhodraiji Temple, Dakor"],
@@ -158,7 +165,7 @@ export default function ToursPage() {
                   </div>
                   <div className="poster-mid">
                     <span className="poster-kicker">Explore</span>
-                    <h3 className="poster-title">{t.name}</h3>
+                    <h3 className="poster-title">{t.place}</h3>
                     <span className="poster-ribbon">
                       {t.days > 1 ? `${t.days - 1} ${t.days - 1 === 1 ? "Night" : "Nights"} / ` : ""}{t.days} {t.days === 1 ? "Day" : "Days"}
                     </span>

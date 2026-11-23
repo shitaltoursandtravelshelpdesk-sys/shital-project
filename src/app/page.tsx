@@ -67,7 +67,7 @@ export default function HomePage() {
 
       <section className="sec" id="about">
         <div className="wrap split about">
-          <div className="img-card ph" style={{backgroundImage: "url(/images/fleet-sunset.png),linear-gradient(160deg,#f6c58a,#c97b4a 45%,#3d5a78)"}}></div>
+          <div className="img-card ph about-img" style={{backgroundImage: "url(/images/about-india.png),linear-gradient(160deg,#f6c58a,#c97b4a 45%,#3d5a78)"}}></div>
           <div>
             <div className="eyebrow">About Shital Tours &amp; Travels</div>
             <h2>Reliable transport for<br />a smoother travel experience</h2>
