@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
+<ellipse cx="110" cy="84" rx="96" ry="5" fill="rgba(0,0,0,.25)"/>
+<rect x="88" y="6" width="34" height="12" rx="3" fill="#ffd21f" stroke="#222" stroke-width="2"/>
+<text x="105" y="15.5" font-family="Arial" font-weight="700" font-size="8.5" text-anchor="middle" fill="#222">TAXI</text>
+<path d="M14 58 Q12 46 26 44 L52 40 L74 20 Q80 16 90 16 H142 Q152 16 160 24 L178 40 L200 44 Q210 46 210 56 V66 Q210 70 205 70 H18 Q14 70 14 66 Z" fill="#ffc400" stroke="#222" stroke-width="2.5"/>
+<path d="M60 40 L78 24 Q82 21 88 21 H112 V40 Z" fill="#bfe3f2" stroke="#222" stroke-width="2"/>
+<path d="M118 21 H142 Q149 21 154 26 L168 40 H118 Z" fill="#bfe3f2" stroke="#222" stroke-width="2"/>
+<rect x="14" y="52" width="196" height="5" fill="#222" opacity=".85"/>
+<rect x="198" y="46" width="10" height="5" rx="2" fill="#fff6b0"/>
+<rect x="14" y="46" width="8" height="5" rx="2" fill="#e53935"/>
+<circle cx="56" cy="70" r="15" fill="#222"/><circle cx="56" cy="70" r="7" fill="#bbb"/>
+<circle cx="168" cy="70" r="15" fill="#222"/><circle cx="168" cy="70" r="7" fill="#bbb"/>
+</svg>

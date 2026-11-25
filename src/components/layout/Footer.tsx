@@ -4,7 +4,7 @@ import { BizLink } from "@/components/ui/BizLink";
 import { ChatIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { Logo } from "./Logo";
 import { Social } from "./Social";
-import { SITE_LINKS } from "./nav";
+import { FOOTER_LINKS, SITE_LINKS } from "./nav";
 
 export function Footer() {
   return (
@@ -20,7 +20,7 @@ export function Footer() {
         <div className="cols">
           <div>
             <h5>Quick Links</h5>
-            {SITE_LINKS.map(([h, t]) => (
+            {[...SITE_LINKS, ...FOOTER_LINKS].map(([h, t]) => (
               <Link key={h} href={h}>
                 {t}
               </Link>

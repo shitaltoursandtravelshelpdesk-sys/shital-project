@@ -9,6 +9,16 @@ export const metadata: Metadata = pageMeta({
   path: "/services",
 });
 
+const DIVISIONS: [string, string, string[]][] = [
+  ["Car Rental", "Economy, premium and luxury cars for individuals, families, business travellers and companies.", ["Economy & sedan cars", "SUV & premium cars", "Luxury vehicle rentals", "Local & outstation car rentals", "Airport transfers"]],
+  ["Bus Rental", "Group transport for tourism, corporate events, schools and colleges, weddings and special occasions.", ["Mini bus rentals", "Tempo traveller rentals", "Force Urbania rentals", "Standard bus rentals", "Luxury bus & coach rentals"]],
+  ["Corporate Transportation", "Organised transport for companies, multinational organisations, offices and businesses.", ["Employee pickup & drop", "Executive transportation", "Corporate daily transportation", "Staff & guest transportation", "Dedicated corporate vehicles"]],
+  ["Commercial Vehicle Rental", "Flexible hiring for businesses, organisations, industries and long-term needs.", ["Monthly vehicle hiring", "Fixed-basis vehicle deployment", "Long-term contract hiring", "Commercial car & bus rentals", "Goods carrier & utility vehicles"]],
+  ["Airport & Outstation Travel", "Dependable transport for local travel, airport transfers, business trips and outstation journeys.", ["Airport pickup & drop", "Railway station transfers", "Local city travel", "One-way & round-trip rentals", "Outstation tours & packages"]],
+  ["Industrial & Oilfield Transportation", "Dedicated transport for industries, oilfield operations, project sites and infrastructure.", ["Industrial employee transportation", "Oilfield staff transportation", "Project-based vehicle deployment", "Dedicated car & bus services", "Customised contract transportation", "Long-term industrial vehicle hiring"]],
+  ["Weddings", "Cars and buses for weddings, baraat and guest transport.", ["Decorated cars for the couple", "Luxury cars for the baraat", "Buses & tempo travellers for guests"]],
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -26,6 +36,25 @@ export default function ServicesPage() {
         </div>
       </section>
       
+
+      <section className="sec ab-sec">
+        <div className="wrap center">
+          <div className="eyebrow">Our Divisions</div>
+          <h2 className="sec-title">Complete transportation solutions under one roof</h2>
+          <p className="ab-lead">We provide car, bus and commercial vehicle rental for individuals, companies, industries and institutions &ndash; for local, outstation, employee, tourism and industrial travel.</p>
+          <div className="dv-grid">
+            {DIVISIONS.map(([t, d, items]) => (
+              <div key={t} className="dv-card">
+                <h3>{t}</h3>
+                <p>{d}</p>
+                <ul>{items.map((i) => <li key={i}>{i}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+          <Link className="btn" style={{ marginTop: "26px" }} href="/rates">View Rate Card &rarr;</Link>
+        </div>
+      </section>
+
       <section className="sec">
         <div className="wrap center">
           <div className="eyebrow">How Booking Works</div>

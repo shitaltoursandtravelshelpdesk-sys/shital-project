@@ -28,7 +28,12 @@ export default function HomePage() {
             <span>Travel in comfort</span>
             <span className="outline">with Shital</span>
           </h1>
-          <p>Cars and buses for hotel guests, airport transfers, local journeys and group travel across Ahmedabad.</p>
+          <p>Your Journey, Our Responsibility &ndash; reliable car, bus and commercial vehicle rental in Ahmedabad since 2004.</p>
+          <div className="hero-badges">
+            <span><b>Since 2004</b></span>
+            <span><b>12</b> National Tourism Awards</span>
+            <span><b>Corporate</b> transport experts</span>
+          </div>
           <div className="btns">
             <Link className="btn" href="/book"><CalendarIcon /> Request a Vehicle &rarr;</Link>
             <Link className="btn ghost light" href="/fleet"><CarIcon /> View Our Fleet</Link>
@@ -72,6 +77,7 @@ export default function HomePage() {
             <div className="eyebrow">About Shital Tours &amp; Travels</div>
             <h2>Reliable transport for<br />a smoother travel experience</h2>
             <p>Shital Tours &amp; Travels provides well-maintained cars and buses for hotel guests, airport transfers, local journeys and group travel across Ahmedabad and nearby destinations. Our experienced and courteous drivers focus on safe, comfortable and timely travel, so you can enjoy a hassle-free journey.</p>
+            <Link className="btn ab-more" href="/about">View More &rarr;</Link>
           </div>
         </div>
       </section>

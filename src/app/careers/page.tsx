@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMeta({
 export default function CareersPage() {
   return (
     <>
-      <section className="sec soft">
+      <section className="sec soft cr-top">
         <div className="wrap split">
           <div>
             <div className="eyebrow">Careers</div>

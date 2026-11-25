@@ -1,8 +1,11 @@
 export const SITE_LINKS: [href: string, label: string][] = [
   ["/", "Home"],
+  ["/about", "About Us"],
   ["/services", "Services"],
   ["/packages", "Packages"],
   ["/tours", "Tours"],
+  ["/events", "Events"],
+  ["/brochure", "Brochure"],
   ["/vendor", "Vendors"],
   ["/book", "Book a Vehicle"],
   ["/fleet", "Our Fleet"],
@@ -22,3 +25,8 @@ export const BOOKING_LINKS: [href: string, label: string][] = [
 
 /** Pages that use the booking header and hide the mobile quick bar */
 export const BOOKING_PAGES = ["/review", "/confirmed"];
+
+/** Extra links shown only in the footer */
+export const FOOTER_LINKS: [href: string, label: string][] = [
+  ["/rates", "Rate Card"],
+];

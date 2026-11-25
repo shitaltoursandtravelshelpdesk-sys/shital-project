@@ -67,7 +67,7 @@ export default function VendorPage() {
         </div>
       </section>
 
-      <section className="sec white">
+      <section className="sec white vn-why">
         <div className="wrap center">
           <div className="eyebrow">Why partner with Shital</div>
           <h2 className="sec-title">Grow your travel business with us</h2>
