@@ -9,6 +9,16 @@ export const metadata: Metadata = pageMeta({
   path: "/services",
 });
 
+const DIV_IMG: Record<string, string> = {
+  "Car Rental": "/images/divisions/car.jpg",
+  "Bus Rental": "/images/divisions/bus.jpg",
+  "Corporate Transportation": "/images/corporate-pickup.jpg",
+  "Commercial Vehicle Rental": "/images/divisions/commercial.jpg",
+  "Airport & Outstation Travel": "/images/divisions/airport.jpg",
+  "Industrial & Oilfield Transportation": "/images/divisions/industrial.jpg",
+  "Weddings": "/images/divisions/wedding.jpg",
+};
+
 const DIVISIONS: [string, string, string[]][] = [
   ["Car Rental", "Economy, premium and luxury cars for individuals, families, business travellers and companies.", ["Economy & sedan cars", "SUV & premium cars", "Luxury vehicle rentals", "Local & outstation car rentals", "Airport transfers"]],
   ["Bus Rental", "Group transport for tourism, corporate events, schools and colleges, weddings and special occasions.", ["Mini bus rentals", "Tempo traveller rentals", "Force Urbania rentals", "Standard bus rentals", "Luxury bus & coach rentals"]],
@@ -45,6 +55,7 @@ export default function ServicesPage() {
           <div className="dv-grid">
             {DIVISIONS.map(([t, d, items]) => (
               <div key={t} className="dv-card">
+                {DIV_IMG[t] && <img className="dv-img" src={DIV_IMG[t]} alt={t} />}
                 <h3>{t}</h3>
                 <p>{d}</p>
                 <ul>{items.map((i) => <li key={i}>{i}</li>)}</ul>

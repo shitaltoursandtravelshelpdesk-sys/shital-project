@@ -26,7 +26,7 @@ export default function BrochurePage() {
             </div>
             <div className="btns"><PrintButton /></div>
           </div>
-          <div className="tours-hero-ph" style={{ backgroundImage: "url(/images/travel-globe.jpg)" }} />
+          <div className="tours-hero-ph" style={{ backgroundImage: "url(/images/fleet-showcase-2.jpg)" }} />
         </div>
       </section>
 

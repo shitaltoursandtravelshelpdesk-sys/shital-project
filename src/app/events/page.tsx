@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
+import { GujaratMap, GUJARAT_PLACES } from "@/components/GujaratMap";
+import { PinIcon } from "@/components/icons";
 
 export const metadata: Metadata = pageMeta({
   title: "Event Transport — Shital Tours & Travels",
@@ -23,27 +25,23 @@ const EVENTS: [string, string, string[]][] = [
 export default function EventsPage() {
   return (
     <>
-      <section className="tours-hero vn-small ev-hero">
-        <div className="wrap tours-hero-in">
-          <div>
+
+      <section className="trav ev-map">
+        <div className="wrap">
+          <div className="ev-map-head">
             <div className="eyebrow">Event Transport</div>
             <h1>Travel for every occasion</h1>
             <p>From weddings to corporate conferences, we handle guest transport so you can focus on the event.</p>
-            <div className="btns">
-              <Link className="btn" href="/book">Plan Event Transport &rarr;</Link>
-            </div>
           </div>
-          <div className="th-collage hotel-grid" aria-hidden="true">
-            {[
-              ["Weddings", "/images/events/wedding.jpg"],
-              ["Conferences", "/images/events/conference.jpg"],
-              ["Navratri", "/images/events/garba.jpg"],
-              ["Parties", "/images/events/party.jpg"],
-            ].map(([name, img]) => (
-              <div key={name} className="th-ph" style={{ backgroundImage: `url(${img})` }}>
-                <span>{name}</span>
-              </div>
+          <div className="ev-map-row">
+          <GujaratMap />
+          <ul className="trav-list ev-list">
+            {GUJARAT_PLACES.map(([name], i) => (
+              <li key={name} className={i === 0 ? "home" : undefined}>
+                <PinIcon bare size={14} /> <b>{name}</b> <span>{i === 0 ? "Our base" : "Gujarat"}</span>
+              </li>
             ))}
+          </ul>
           </div>
         </div>
       </section>

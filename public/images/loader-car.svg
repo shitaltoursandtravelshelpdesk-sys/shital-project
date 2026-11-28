@@ -1,13 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
-<ellipse cx="110" cy="84" rx="96" ry="5" fill="rgba(0,0,0,.25)"/>
-<rect x="88" y="6" width="34" height="12" rx="3" fill="#ffd21f" stroke="#222" stroke-width="2"/>
-<text x="105" y="15.5" font-family="Arial" font-weight="700" font-size="8.5" text-anchor="middle" fill="#222">TAXI</text>
-<path d="M14 58 Q12 46 26 44 L52 40 L74 20 Q80 16 90 16 H142 Q152 16 160 24 L178 40 L200 44 Q210 46 210 56 V66 Q210 70 205 70 H18 Q14 70 14 66 Z" fill="#ffc400" stroke="#222" stroke-width="2.5"/>
-<path d="M60 40 L78 24 Q82 21 88 21 H112 V40 Z" fill="#bfe3f2" stroke="#222" stroke-width="2"/>
-<path d="M118 21 H142 Q149 21 154 26 L168 40 H118 Z" fill="#bfe3f2" stroke="#222" stroke-width="2"/>
-<rect x="14" y="52" width="196" height="5" fill="#222" opacity=".85"/>
-<rect x="198" y="46" width="10" height="5" rx="2" fill="#fff6b0"/>
-<rect x="14" y="46" width="8" height="5" rx="2" fill="#e53935"/>
-<circle cx="56" cy="70" r="15" fill="#222"/><circle cx="56" cy="70" r="7" fill="#bbb"/>
-<circle cx="168" cy="70" r="15" fill="#222"/><circle cx="168" cy="70" r="7" fill="#bbb"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".6" stop-color="#e9eef2"/>
+      <stop offset="1" stop-color="#b9c4cc"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b3e4f"/>
+      <stop offset="1" stop-color="#5d7a90"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="130" cy="92" rx="118" ry="5" fill="rgba(0,0,0,.28)"/>
+  <!-- body (MPV shape, facing right) -->
+  <path d="M10 70 Q8 50 22 44 L40 22 Q46 14 58 13 H170 Q182 13 192 20 L222 42 Q246 46 250 58 L252 70 Q252 78 244 78 H18 Q10 78 10 70 Z" fill="url(#body)" stroke="#8a98a3" stroke-width="1.5"/>
+  <!-- windows -->
+  <path d="M30 42 L46 22 Q50 18 58 18 H86 V42 Z" fill="url(#glass)"/>
+  <path d="M91 18 H132 V42 H91 Z" fill="url(#glass)"/>
+  <path d="M137 18 H168 Q178 18 186 24 L210 42 H137 Z" fill="url(#glass)"/>
+  <!-- pillars / door lines -->
+  <path d="M88 18 V74 M134 18 V74 M176 44 V74" stroke="#a7b3bc" stroke-width="1.4"/>
+  <!-- handles -->
+  <rect x="112" y="50" width="12" height="3" rx="1.5" fill="#8a98a3"/>
+  <rect x="156" y="50" width="12" height="3" rx="1.5" fill="#8a98a3"/>
+  <!-- chrome strip -->
+  <path d="M14 60 H250" stroke="#cfd8de" stroke-width="2"/>
+  <!-- headlight / tail light -->
+  <path d="M234 48 Q246 50 248 56 H236 Z" fill="#fff8c4" stroke="#c9b65a" stroke-width="1"/>
+  <rect x="11" y="48" width="8" height="8" rx="2" fill="#d32f2f"/>
+  <!-- mirror -->
+  <path d="M200 38 l8 -2 v6 h-8 z" fill="#c4ced6"/>
+  <!-- yellow commercial plate hint -->
+  <rect x="236" y="64" width="14" height="7" rx="1.5" fill="#f5c518"/>
+  <!-- wheels -->
+  <g>
+    <circle cx="62" cy="78" r="16" fill="#1d252c"/>
+    <circle cx="62" cy="78" r="9" fill="#c5ccd2"/>
+    <circle cx="62" cy="78" r="3" fill="#59646d"/>
+    <circle cx="200" cy="78" r="16" fill="#1d252c"/>
+    <circle cx="200" cy="78" r="9" fill="#c5ccd2"/>
+    <circle cx="200" cy="78" r="3" fill="#59646d"/>
+  </g>
 </svg>

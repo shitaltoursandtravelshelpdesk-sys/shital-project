@@ -39,7 +39,7 @@ export default function AboutPage() {
               <Link className="btn" href="/book">Book a Vehicle &rarr;</Link>
             </div>
           </div>
-          <div className="tours-hero-ph" style={{ backgroundImage: "url(/images/fleet/gallery/1.jpg)" }} />
+          <div className="tours-hero-ph" style={{ backgroundImage: "url(/images/about-team.jpg)" }} />
         </div>
       </section>
 
@@ -86,6 +86,10 @@ export default function AboutPage() {
             {AWARD_YEARS.map((y) => (
               <span key={y}>{y}</span>
             ))}
+          </div>
+          <div className="ab-photos">
+            <img src="/images/about-award-1.jpg" alt="Shital Tours & Travels team receiving an award" />
+            <img src="/images/about-award-2.jpg" alt="Shital Tours & Travels receiving recognition" />
           </div>
           <div className="ab-extra">
             <div><b>Special Scroll of Honour</b><span>2010</span></div>

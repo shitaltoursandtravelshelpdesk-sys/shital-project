@@ -70,6 +70,20 @@ export default function HomePage() {
       
       <ClientLogos />
 
+      <section className="sec brand-show">
+        <div className="wrap center">
+          <div className="eyebrow">Our Fleet</div>
+          <h2 className="sec-title">Luxury cars and coaches, ready for you</h2>
+          <div className="brand-grid">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/fleet-showcase-2.jpg" alt="Shital Tours & Travels cars and coach" loading="lazy" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/fleet-showcase.jpg" alt="Shital Tours & Travels fleet at a hotel" loading="lazy" />
+          </div>
+          <Link className="btn" style={{ marginTop: "24px" }} href="/fleet">View Our Fleet &rarr;</Link>
+        </div>
+      </section>
+
       <section className="sec" id="about">
         <div className="wrap split about">
           <div className="img-card ph about-img" style={{backgroundImage: "url(/images/about-india.png),linear-gradient(160deg,#f6c58a,#c97b4a 45%,#3d5a78)"}}></div>

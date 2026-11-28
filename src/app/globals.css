@@ -1261,3 +1261,73 @@ section.svc-top .eyebrow,section.svc-top div.eyebrow{color:#fff!important}
 .ftr .cols span{display:flex!important;align-items:flex-start!important;gap:12px!important;max-width:420px!important}.ftr .cols span > svg,.ftr .cols span > :first-child:is(svg,i,span){flex:0 0 22px!important;width:22px!important;height:22px!important;position:static!important;margin:2px 0 0!important}.ftr .social{padding-left:34px!important}
 .ftr .social{padding-left:0!important;margin-top:20px!important;position:static!important;transform:none!important}
 #about .ab-more{margin-top:18px;background:#fff!important;color:#0a2f52!important;display:inline-flex}
+.dw-img{background-image:url(/images/driver-real.jpg)!important;background-size:cover!important;background-position:center 35%!important}
+.cr-top{background:linear-gradient(90deg,#06618f 0%,#0582b3 40%,#06abdb 52%,rgba(6,171,219,0) 56%),url(/images/driver-real.jpg) right 62%/46% auto no-repeat,#06abdb!important}
+.pl-road{width:360px!important;height:90px!important}.pl-car{width:150px!important;bottom:2px!important}@keyframes plDrive{0%{left:-155px}100%{left:365px}}
+/* loader: road across full screen, logo on car door */
+.pl-road{width:100vw!important;height:110px!important}
+.pl-car{width:200px!important;height:auto!important;bottom:2px!important;animation:plDrive 2.4s linear infinite!important}
+.pl-car > img{display:block;width:100%;height:auto}
+.pl-car .pl-car-logo{position:absolute;width:34px!important;height:34px!important;border-radius:50%;object-fit:cover;left:50%;top:44%;transform:translate(-50%,-50%);box-shadow:0 0 0 2px #fff}
+@keyframes plDrive{0%{left:-210px}100%{left:100vw}}
+.pl-car .pl-car-logo{left:50%!important;top:60%!important;width:30px!important;height:30px!important}
+.pl-car{width:230px!important}
+/* smooth car: GPU transform, one full pass */
+.pl-car{left:0!important;will-change:transform;animation:plDrive2 2.8s cubic-bezier(.45,.05,.55,.95) forwards!important}
+@keyframes plDrive2{from{transform:translate3d(-240px,0,0)}to{transform:translate3d(100vw,0,0)}}
+.pl-road::after{animation-duration:.35s!important}
+.pl-car{animation-duration:1s!important}.pl{transition:opacity .4s ease,visibility .4s!important}
+.pl-car{animation:plDrive2 1.4s linear infinite!important}
+.pl-car{animation:none!important;transform:translate3d(-240px,0,0)}.pl-car.pl-go{animation:plDrive2 1.4s cubic-bezier(.45,.05,.55,.95) forwards!important}
+.pl-car.pl-go{animation-duration:2.4s!important}
+.ev-hero .tours-hero-in > div:first-child{max-width:none!important}.ev-hero p{max-width:none!important;white-space:nowrap}@media (max-width:900px){.ev-hero p{white-space:normal}}
+.ev-hero{padding-top:28px!important;padding-bottom:36px!important;min-height:0!important}
+.ev-hero::before{display:none!important}
+@media (min-width:1001px){.ev-hero{padding-top:14px!important}.ev-hero .tours-hero-in > div:first-child{padding-left:min(370px,22vw)}}
+@media (min-width:1001px){.ev-hero .tours-hero-in > div:first-child{padding-left:min(290px,18vw)!important}}
+@media (min-width:1001px){.ev-hero .tours-hero-in{position:relative}.ev-hero .tours-hero-in > div:first-child{position:static!important}.ev-hero .eyebrow{position:absolute!important;right:0;top:0;margin:0!important}.ev-hero h1{margin-top:44px!important}}
+@media (min-width:1001px){.ev-hero h1{margin-top:20px!important}}
+.guj-map{max-width:none!important}
+.guj-map .st{stroke-width:.25!important}
+.guj-map .route{stroke-width:.4!important;stroke-dasharray:1.4 1.4!important}
+.guj-map .pin .dot{stroke-width:.4!important}
+.guj-map .guj-lbl{font-size:3.4px;fill:#fff;text-anchor:middle;font-weight:700;paint-order:stroke;stroke:#0a2f52;stroke-width:.6px}
+.guj-wrap{margin:6px 0 18px}
+.guj-map{overflow:hidden!important}
+.ev-map{padding:24px 0 30px}.ev-map .guj-map{max-width:900px!important;margin:0 auto}
+.guj-map .st:not(.on){display:none}.ev-map .guj-map{max-width:640px!important}
+.ev-map{padding-top:18px!important}
+.ev-map-head{text-align:center;margin:0 auto 6px;padding-left:120px}
+.ev-map-head .eyebrow{color:#fff!important;background:rgba(255,255,255,.14)!important;border-color:rgba(255,255,255,.35)!important;display:inline-flex!important}
+.ev-map-head h1{color:#fff;font-family:var(--font-inter),"Inter",sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,46px);margin:8px 0 6px}
+.ev-map-head p{color:#d6e6ee;font-size:16px;margin:0}
+@media (max-width:1000px){.ev-map-head{padding-left:0;padding-top:20px}}
+.ev-map-in{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center}
+.ev-map-head{text-align:left!important;padding-left:0!important;margin:0!important}
+.ev-map .guj-map{max-width:none!important}
+@media (max-width:900px){.ev-map-in{grid-template-columns:1fr}.ev-map-head{order:-1;text-align:center!important}}
+.ev-map-head{text-align:center!important;padding-left:120px!important;margin:0 auto 6px!important}.ev-map .guj-map{max-width:640px!important;margin:0 auto}@media (max-width:1000px){.ev-map-head{padding-left:0!important}}
+.ev-list{max-width:900px;margin:26px auto 0!important}
+.ev-map-row{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin-top:10px}
+.ev-map .ev-map-row .guj-map{max-width:none!important}
+.ev-list{margin:0!important;max-width:none;grid-template-columns:repeat(2,1fr)!important}
+@media (max-width:900px){.ev-map-row{grid-template-columns:1fr}}
+/* real photo clouds instead of the drawn ones */
+.tours-hero::before,.pk-hero::after,.phero:not(.pk-hero)::after{background:url(/images/clouds-real.png) left -40px/560px auto no-repeat!important;opacity:.75!important;-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent 100%);mask-image:linear-gradient(180deg,#000 40%,transparent 100%);height:260px!important;width:600px!important}
+.ab-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:0 auto 22px}.ab-photos img{width:100%;height:280px;object-fit:cover;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.3)}@media (max-width:600px){.ab-photos{grid-template-columns:1fr}}
+.hotel-band .ph{background-image:url(/images/hotel-real.jpg)!important;background-size:cover!important;background-position:center 55%!important}
+.hotel-band .ph{background-position:center 22%!important}
+.dv-img{width:calc(100% + 44px);margin:-22px -22px 14px;height:170px;object-fit:cover;border-radius:14px 14px 0 0;display:block}.dv-card{overflow:hidden}
+.dv-card{padding:0!important}.dv-card > :not(.dv-img){margin-left:22px;margin-right:22px}.dv-card > h3{margin-top:18px}.dv-card > ul{margin-left:40px!important;margin-bottom:20px}.dv-img{width:100%!important;margin:0!important;height:190px!important;border-radius:10px 10px 0 0}
+.fl-banner img{display:block;width:100%;height:auto;max-height:620px;object-fit:cover}
+.hero2-bg{background-image:url(/images/fleet-showcase.jpg)!important;background-position:center!important}
+.hero2-bg{background-image:url(/images/fleet-dusk.jpg)!important}
+.hero2-bg{background-image:url(/images/hero-hotel.png)!important}
+.brand-show{background:var(--champagne)!important}.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:10px}.brand-grid img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;box-shadow:0 12px 30px rgba(10,47,82,.18)}@media (max-width:760px){.brand-grid{grid-template-columns:1fr}}
+.fl-banner{background:var(--champagne);padding:28px 0 8px}.fl-banner img{width:100%!important;max-height:none!important;aspect-ratio:16/7;object-fit:cover;object-position:center 60%;border-radius:18px;box-shadow:0 14px 34px rgba(10,47,82,.22)}
+.fl-banner{padding-top:40px!important}.fl-banner img{aspect-ratio:16/8.2!important;object-position:center top!important}
+@media (min-width:1001px){.br-hero .tours-hero-ph{background-position:center top!important}}
+.pk-hero .bg{background-position:center top!important}
+.vn-full .vn-hero-ph{background-image:url(/images/fleet-dusk.jpg)!important;background-size:cover!important;background-position:center!important}
+.vn-full .vn-hero-ph{background-position:center 80%!important}
+.cr-top{background:linear-gradient(90deg,#06618f 0%,#0582b3 40%,#06abdb 52%,rgba(6,171,219,0) 56%),url(/images/careers-driver.jpg) right 30%/46% auto no-repeat,#06abdb!important}

@@ -100,7 +100,7 @@ export default function PackagesPage() {
             <p>Hotel staff can submit a guest&apos;s travel request with the trip details. Our operations team will confirm the suitable vehicle and driver and coordinate the pickup as per the guest&apos;s schedule.</p>
             <Link className="btn mt" style={{marginTop: "18px"}} href="/book?for=hotel">Submit a Guest Request &rarr;</Link>
           </div>
-          <div className="img-card ph" style={{aspectRatio: "1467/1072", minHeight: "0", backgroundSize: "cover", backgroundPosition: "center top", backgroundImage: "url(/images/hotel-chauffeur.png),linear-gradient(135deg,#3a2a14,#b98b4c 55%,#2a1d0e)"}}></div>
+          <div className="img-card ph" style={{aspectRatio: "1467/1072", minHeight: "0", backgroundSize: "cover", backgroundPosition: "center", backgroundImage: "url(/images/corporate-pickup.jpg)"}}></div>
         </div>
       </section>
 

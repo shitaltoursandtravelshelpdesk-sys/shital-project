@@ -12,6 +12,21 @@ export const metadata: Metadata = pageMeta({
 export default function FleetPage() {
   return (
     <>
+      <section className="tours-hero th-full br-hero">
+        <div className="wrap tours-hero-in">
+          <div>
+            <div className="eyebrow">Our Fleet</div>
+            <h1>Cars, MPVs &amp; Coaches</h1>
+            <p>From Maybach and Vellfire to tempo travellers and 50-seat coaches, every vehicle comes with a professional driver.</p>
+            <div className="th-chips">
+              <span>Luxury Cars</span><span>MPVs &amp; SUVs</span><span>Buses &amp; Coaches</span>
+            </div>
+            <div className="btns"><a className="btn" href="/book">Book a Vehicle &rarr;</a></div>
+          </div>
+          <div className="tours-hero-ph" style={{ backgroundImage: "url(/images/fleet-showcase.jpg)" }} />
+        </div>
+      </section>
+
       <section className="sec soft">
         <div className="wrap center">
           <div className="eyebrow">Our Fleet</div>
