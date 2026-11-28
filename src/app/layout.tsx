@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileBar } from "@/components/layout/MobileBar";
 import { Preloader } from "@/components/layout/Preloader";
+import { SiteOnly } from "@/components/layout/SiteOnly";
 import { ToastProvider } from "@/components/ui/Toast";
 import { SITE_NAME, SITE_URL } from "@/lib/config";
 
@@ -54,11 +55,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <ToastProvider>
-          <Preloader />
-          <Header />
+          <SiteOnly>
+            <Preloader />
+            <Header />
+          </SiteOnly>
           {children}
-          <Footer />
-          <MobileBar />
+          <SiteOnly>
+            <Footer />
+            <MobileBar />
+          </SiteOnly>
         </ToastProvider>
       </body>
     </html>
