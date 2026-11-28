@@ -1331,3 +1331,5 @@ section.svc-top .eyebrow,section.svc-top div.eyebrow{color:#fff!important}
 .vn-full .vn-hero-ph{background-image:url(/images/fleet-dusk.jpg)!important;background-size:cover!important;background-position:center!important}
 .vn-full .vn-hero-ph{background-position:center 80%!important}
 .cr-top{background:linear-gradient(90deg,#06618f 0%,#0582b3 40%,#06abdb 52%,rgba(6,171,219,0) 56%),url(/images/careers-driver.jpg) right 30%/46% auto no-repeat,#06abdb!important}
+.svc-top .it{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.28)!important;box-shadow:none!important}.svc-top .it h3,.svc-top .it p{color:#fff!important}
+@media (max-width:560px){.dv-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}.dv-img{height:110px!important}.dv-card > :not(.dv-img){margin-left:10px!important;margin-right:10px!important}.dv-card h3{font-size:14px!important;margin-top:10px!important}.dv-card p{font-size:11.5px!important;line-height:1.45}.dv-card > ul{margin-left:24px!important;font-size:11.5px!important;line-height:1.6!important;margin-bottom:12px!important}}
